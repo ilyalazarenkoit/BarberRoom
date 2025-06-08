@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+body {
+  min-height: 100vh;
+  /* Исправление для iOS Safari */
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overscroll-behavior-y: none;
+  position: relative;
+}
+
+/* Стили для якорных ссылок с учетом фиксированного хедера */
+html {
+  scroll-behavior: smooth; /* Плавная прокрутка */
+  scroll-padding-top: 5rem; /* Отступ сверху для учета высоты хедера */
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Для мобильных устройств уменьшаем отступ */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 4rem;
+  }
+}

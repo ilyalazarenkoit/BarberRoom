@@ -1,0 +1,132 @@
+{
+  "header": {
+    "gallery": "Gallery",
+    "services": "Services",
+    "barbers": "Barbers",
+    "contacts": "Contacts",
+    "address": "Darnytsia, Budivelnykiv St. 32/2",
+    "workHours": "Mon-Sun from 10:00 to 20:00",
+    "book": "Book",
+    "booking": "Book Now",
+    "phone": "+38 012 345 67 89"
+  },
+  "navMenu": {
+    "close": "Close",
+    "phone": "Phone",
+    "workHours": "Working Hours"
+  },
+  "language": {
+    "ua": "Ukrainian",
+    "ru": "Russian",
+    "en": "English"
+  },
+  "main": {
+    "title": "Your style - our work",
+    "subtitle": "Professional barbers, quality materials and the atmosphere of a real men's club",
+    "book": "Book Now",
+    "interiorAlt": "Barbershop interior"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Our Works",
+    "haircutsTitle": "Haircuts",
+    "beardsTitle": "Beards",
+    "haircuts": {
+      "1": {
+        "name": "Classic Elegance",
+        "description": "Impeccable style for confident men"
+      },
+      "2": {
+        "name": "Modern Fade",
+        "description": "Contemporary gradient transition with emphasis on individuality"
+      },
+      "3": {
+        "name": "Urban Style",
+        "description": "Stylish casualness for the city rhythm of life"
+      },
+      "4": {
+        "name": "Business Charm",
+        "description": "Perfect balance of conservatism and modern trends"
+      },
+      "5": {
+        "name": "Creative Undercut",
+        "description": "Expressive style for those who aren't afraid to stand out"
+      }
+    },
+    "beards": {
+      "1": {
+        "name": "Well-Groomed Beard",
+        "description": "Perfect emphasis on masculinity and character"
+      },
+      "2": {
+        "name": "Royal Contour",
+        "description": "Clear lines and shape that highlight facial features"
+      },
+      "3": {
+        "name": "Stylish Shaping",
+        "description": "Neatness and attention to detail in every line"
+      },
+      "4": {
+        "name": "Elegant Stubble",
+        "description": "Minimalism that adds charm and masculinity"
+      },
+      "5": {
+        "name": "Full Beard",
+        "description": "Embodiment of strength and confidence in every hair"
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer a wide range of hair and beard care services",
+    "haircut": "Haircut",
+    "beard": "Beard",
+    "price": "Price",
+    "juniorBarber": "Junior Barber",
+    "barber": "Barber",
+    "seniorBarber": "Senior Barber",
+    "mensHaircut": "Men's Haircut",
+    "beardTrim": "Beard Trim",
+    "combo": "Combo (Haircut + Beard)",
+    "wax": "Wax",
+    "bookJunior": "Book with Junior Barber ({{name}})",
+    "bookBarber": "Book with Barber ({{name}})",
+    "bookSenior": "Book with Senior Barber ({{name}})"
+  },
+  "barbers": {
+    "title": "Our Barbers",
+    "subtitle": "Professionals who know everything about men's haircuts and beard care",
+    "book": "Book with",
+    "barberAlt": "Barber {{name}}",
+    "team": [
+      {
+        "name": "Yegor",
+        "position": "Junior Barber",
+        "description": "Specialist in classic men's haircuts. 2 years of experience."
+      },
+      {
+        "name": "Bogdan",
+        "position": "Barber",
+        "description": "Expert in modern trends of men's haircuts. 3 years of experience."
+      },
+      {
+        "name": "Dima",
+        "position": "Barber",
+        "description": "Master of stylish haircuts and beard care. 4 years of experience."
+      },
+      {
+        "name": "Ilya",
+        "position": "Senior Barber",
+        "description": "High-class master with extensive experience. 7 years of experience."
+      }
+    ]
+  },
+  "footer": {
+    "address": "Address",
+    "phone": "Phone",
+    "workHours": "Working Hours",
+    "email": "Email",
+    "social": "Social Media",
+    "copyright": "Barber Room, All Rights Reserved"
+  }
+}
