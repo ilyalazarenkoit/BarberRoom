@@ -10,7 +10,7 @@ const barbers = [
     name: "Єгор",
     position: "Молодший барбер",
     bookingUrl: "https://n1347023.alteg.io",
-    imageSrc: "/images/egor.jpeg",
+    imageSrc: "/images/egor.JPEG",
     description:
       "Спеціаліст у класичних чоловічих стрижках. Стаж роботи 2 роки.",
   },
@@ -26,7 +26,7 @@ const barbers = [
     name: "Дима",
     position: "Барбер",
     bookingUrl: "https://n1366469.alteg.io",
-    imageSrc: "/images/dima.jpeg",
+    imageSrc: "/images/dima.JPEG",
     description:
       "Майстер стильних зачісок та догляду за бородою. Стаж роботи 4 роки.",
   },
@@ -35,7 +35,7 @@ const barbers = [
     name: "Ілля",
     position: "Старший барбер",
     bookingUrl: "https://n524499.alteg.io",
-    imageSrc: "/images/ilya.jpeg",
+    imageSrc: "/images/ilya.JPEG",
 
     description:
       "Майстер вищого класу з великим досвідом. Стаж роботи 7 років.",
