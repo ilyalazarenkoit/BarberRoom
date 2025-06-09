@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Clock, InstagramLogo, Copyright } from "phosphor-react";
-import { useTranslation } from "../lib/i18n/client";
+import { useTranslation } from "react-i18next";
 
 // Анимация для появления элементов
 const fadeInUp = {
@@ -37,7 +37,7 @@ export const Footer = () => {
                 },
               },
             }}
-            className="space-y-6 md:flex md:flex-col md:items-center md:justify-center"
+            className="space-y-6 md:flex md:flex-col"
           >
             <motion.h2
               variants={fadeInUp}
@@ -116,34 +116,32 @@ export const Footer = () => {
 
           {/* Карта с кнопкой для перехода на Google Maps */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full h-[250px] md:h-[400px] rounded-md overflow-hidden relative"
+            variants={fadeInUp}
+            className="relative w-full aspect-square sm:aspect-[4/3] md:aspect-video lg:aspect-[4/3] max-h-[400px] rounded-lg overflow-hidden"
           >
-            {/* Кнопка для перехода на Google Maps */}
-            <a
-              href="https://maps.google.com/?q=Будівельників+32/2,+Київ,+Україна"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute top-4 right-4 z-20 bg-white text-[#0B322F] px-4 py-2 rounded-md font-medium shadow-md hover:bg-gray-100 transition-all duration-300 flex items-center space-x-2"
-            >
-              <MapPin size={20} weight="bold" />
-              <span>Відкрити на Google Maps</span>
-            </a>
-
-            {/* iframe с Google Maps */}
+            <div className="absolute top-2 right-2 z-10">
+              <a
+                href="https://maps.google.com/?q=Київ,вул.Будівельників,32/2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-[#0B322F] px-2 py-1 text-xs md:text-sm font-medium rounded shadow hover:bg-opacity-90 transition-all duration-300 flex items-center"
+              >
+                {t("footer.openMap")}
+              </a>
+            </div>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.8107861917166!2d30.610931376944754!3d50.45499408555602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf8b7e2e7c91%3A0x7c3b1f5a1e7d9d5b!2z0LLRg9C70LjRhtGPINCR0YPQtNGW0LLQtdC70YzQvdC40LrRltCyLCAzMi8yLCDQmtC40ZfQsiwgMDIwOTU!5e0!3m2!1suk!2sua!4v1654321234567!5m2!1suk!2sua"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.8107943525417!2d30.630954376944872!3d50.43307787159063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c57dd83b9e93%3A0x9c2d8e8e9d018c9b!2z0LLRg9C70LjRhtGPINCR0YPQtNGW0LLQtdC70YzQvdC40LrRltCyLCAzMi8yLCDQmtC40ZfQsiwgMDIwOTU!5e0!3m2!1suk!2sua!4v1717427046161!5m2!1suk!2sua"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Карта розташування барбершопу"
-              className="rounded-md"
+              title="Google Maps - Barber Room location"
+              aria-label="Map showing Barber Room location"
             ></iframe>
           </motion.div>
         </div>

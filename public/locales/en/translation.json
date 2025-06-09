@@ -127,6 +127,7 @@
     "workHours": "Working Hours",
     "email": "Email",
     "social": "Social Media",
-    "copyright": "Barber Room, All Rights Reserved"
+    "copyright": "Barber Room, All Rights Reserved",
+    "openMap": "Open on Google Maps"
   }
 }

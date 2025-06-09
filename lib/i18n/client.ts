@@ -1,34 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import i18next from "./index";
-import { useTranslation as useTranslationOrg } from "react-i18next";
-import { TFunction } from "i18next";
+import i18n from "./i18n";
+import { useEffect } from "react";
 
-export function useTranslation() {
-  const [loaded, setLoaded] = useState(false);
-  const ret = useTranslationOrg();
-
+// Этот хук инициализирует i18next на клиенте
+export function useClientI18n() {
   useEffect(() => {
-    setLoaded(true);
+    // Проверяем, что i18next уже не инициализирован
+    if (!i18n.isInitialized) {
+      i18n.init();
+    }
   }, []);
 
-  return {
-    ...ret,
-    t: loaded
-      ? ret.t
-      : // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        (((key: string, ...rest: unknown[]) => key) as unknown as TFunction),
-    ready: loaded && ret.ready,
-  };
+  return i18n;
 }
 
-export function changeLanguage(lng: string) {
-  return i18next.changeLanguage(lng);
-}
-
-export function getLanguage() {
-  return i18next.language || "ua";
-}
-
-export default i18next;
+// Экспортируем i18n для прямого использования
+export default i18n;

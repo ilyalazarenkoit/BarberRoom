@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -13,7 +14,7 @@ import {
 import { motion } from "framer-motion";
 import { NavMenu } from "./NavMenu";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { useTranslation } from "../lib/i18n/client";
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

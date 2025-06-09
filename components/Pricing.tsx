@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { CalendarBlank, Scissors } from "phosphor-react";
-import { useTranslation } from "../lib/i18n/client";
+import { useTranslation } from "react-i18next";
 
 // Анимация для появления элементов
 const fadeInUp = {

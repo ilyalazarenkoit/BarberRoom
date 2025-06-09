@@ -1,7 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { CalendarBlank } from "phosphor-react";
-import { useTranslation } from "../lib/i18n/client";
+import { useTranslation } from "react-i18next";
 
 // Данные о мастерах
 const barbers = [
@@ -35,6 +36,7 @@ const barbers = [
     position: "Старший барбер",
     bookingUrl: "https://n524499.alteg.io",
     imageSrc: "/images/ilya.jpeg",
+
     description:
       "Майстер вищого класу з великим досвідом. Стаж роботи 7 років.",
   },

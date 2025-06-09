@@ -1,3 +1,4 @@
+"use client";
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
@@ -5,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import type { SwiperRef } from "swiper/react";
 import { Scissors } from "phosphor-react";
-import { useTranslation } from "../lib/i18n/client";
+import { useTranslation } from "react-i18next";
 
 // Импорт стилей Swiper
 import "swiper/css";

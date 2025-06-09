@@ -5,7 +5,7 @@ import { CalendarBlank } from "phosphor-react";
 import { Barbers } from "./Barbers";
 import { Gallery } from "./Gallery";
 import { Pricing } from "./Pricing";
-import { useTranslation } from "../lib/i18n/client";
+import { useTranslation } from "react-i18next";
 
 // Анимация для появления элементов
 const fadeInUp = {

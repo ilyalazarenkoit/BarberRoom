@@ -1,8 +1,9 @@
 "use client";
+
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { X, Phone, InstagramLogo } from "phosphor-react";
-import { useTranslation } from "../lib/i18n/client";
+import { useTranslation } from "react-i18next";
 import { useEffect, useRef } from "react";
 
 interface NavMenuProps {
