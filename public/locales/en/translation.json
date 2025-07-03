@@ -1,4 +1,7 @@
 {
+  "common": {
+    "close": "Close"
+  },
   "header": {
     "gallery": "Gallery",
     "services": "Services",
@@ -129,5 +132,55 @@
     "social": "Social Media",
     "copyright": "Barber Room, All Rights Reserved",
     "openMap": "Open on Google Maps"
+  },
+  "roulette": {
+    "title": "Get Your Discount",
+    "description": "Spin the wheel and get a discount for our barbershop services",
+    "spinButton": "Spin the Wheel",
+    "alreadySpun": "You've already received a discount",
+    "alreadyHasDiscount": "You've already received a discount earlier",
+    "spinFailed": "Failed to get the spin result",
+    "resultError": "Error determining the result",
+    "errorButContinue": "An error occurred, but we still determined your discount",
+    "congratulations": "Congratulations! You won a discount of",
+    "enterPhonePrompt": "Enter your details to receive the discount",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "phoneLabel": "Phone number",
+    "enterValidPhone": "Please enter a valid phone number",
+    "enterName": "Please enter your name",
+    "sending": "Sending...",
+    "getDiscount": "Get Discount",
+    "submitError": "An error occurred while submitting your data",
+    "discountSuccess": "Congratulations! The discount has been successfully linked to your phone number",
+    "discountSmsSuccess": "Discount confirmation has been sent to your phone via SMS. Please check your messages and show the SMS to our administrator to receive your discount.",
+    "resetButton": "Reset (for testing only)",
+    "discountTerms": "* Discount applies to your first haircut. One discount per phone number.",
+    "viewFullTerms": "View full terms & conditions"
+  },
+  "discountButton": {
+    "getDiscount": "Get Discount"
+  },
+  "discountTerms": {
+    "title": "Discount Terms & Conditions",
+    "rulesTitle": "Discount Rules",
+    "rules": {
+      "firstHaircut": "Discount applies only to your first haircut at our barbershop",
+      "onePerPhone": "One discount per phone number",
+      "validity": "Discount is valid for 30 days from receipt",
+      "showSms": "To use the discount, show the SMS message with your discount confirmation",
+      "notCombined": "Discount cannot be combined with other promotions",
+      "notForProducts": "Discount does not apply to hair and beard care products",
+      "rightToChange": "Barbershop administration reserves the right to change promotion terms"
+    },
+    "howToUseTitle": "How to Use Your Discount",
+    "howToUse": {
+      "spinWheel": "Spin the wheel and get your discount",
+      "enterPhone": "Enter your phone number in the form",
+      "getSms": "Receive an SMS with your discount confirmation",
+      "mentionDiscount": "Mention your discount when booking an appointment",
+      "showCode": "Show the SMS with your discount to the administrator before payment"
+    },
+    "questions": "* For any questions about the promotion, please contact the phone number listed on the website."
   }
 }
