@@ -88,9 +88,9 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
   useEffect(() => {
     const hasUserSpun = localStorage.getItem("hasSpunRoulette");
     const hasSubmittedForm = localStorage.getItem("hasSubmittedRouletteForm");
-    const savedToken = sessionStorage.getItem("rouletteToken");
-    const savedUserName = sessionStorage.getItem("rouletteUserName");
-    const savedPhoneNumber = sessionStorage.getItem("roulettePhoneNumber");
+    const savedToken = localStorage.getItem("rouletteToken");
+    const savedUserName = localStorage.getItem("rouletteUserName");
+    const savedPhoneNumber = localStorage.getItem("roulettePhoneNumber");
 
     if (hasUserSpun === "true") {
       setCanSpin(false);
@@ -99,6 +99,9 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
       // Если есть сохраненный токен, проверяем его на сервере
       if (savedToken) {
         validateRouletteToken(savedToken);
+      } else {
+        // Если токена нет, но флаг hasUserSpun установлен, сбрасываем состояние
+        handleReset();
       }
 
       if (hasSubmittedForm !== "true") {
@@ -159,7 +162,7 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
       if (data.success && data.valid) {
         setPrizeNumber(data.prizeNumber);
       } else {
-        sessionStorage.removeItem("rouletteToken");
+        localStorage.removeItem("rouletteToken");
         console.warn("Токен рулетки недействителен или истек");
       }
     } catch (error) {
@@ -232,7 +235,7 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
       const data = await response.json();
 
       if (data.success) {
-        sessionStorage.setItem("rouletteToken", data.token);
+        localStorage.setItem("rouletteToken", data.token);
       } else {
         console.error("Не удалось получить токен рулетки");
       }
@@ -258,22 +261,22 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
     }
 
     setPhoneNumber(value);
-    sessionStorage.setItem("roulettePhoneNumber", value);
+    localStorage.setItem("roulettePhoneNumber", value);
   };
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setUserName(value);
-    sessionStorage.setItem("rouletteUserName", value);
+    localStorage.setItem("rouletteUserName", value);
   };
 
   const handleReset = () => {
     localStorage.removeItem("hasSpunRoulette");
     localStorage.removeItem("hasSubmittedRouletteForm");
 
-    sessionStorage.removeItem("rouletteToken");
-    sessionStorage.removeItem("rouletteUserName");
-    sessionStorage.removeItem("roulettePhoneNumber");
+    localStorage.removeItem("rouletteToken");
+    localStorage.removeItem("rouletteUserName");
+    localStorage.removeItem("roulettePhoneNumber");
 
     setCanSpin(true);
     setHasSpun(false);
@@ -307,7 +310,7 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
     setError(null);
 
     try {
-      const savedToken = sessionStorage.getItem("rouletteToken");
+      const savedToken = localStorage.getItem("rouletteToken");
       let actualPrizeNumber = prizeNumber;
 
       if (savedToken) {
@@ -339,7 +342,7 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
           phoneNumber,
           userName,
           discountValue: discountData[actualPrizeNumber].value,
-          lang: i18n.language, // Добавляем текущий язык из i18n
+          lang: i18n.language,
         }),
       });
 
@@ -364,9 +367,9 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
 
       localStorage.setItem("hasSubmittedRouletteForm", "true");
 
-      sessionStorage.removeItem("rouletteToken");
-      sessionStorage.removeItem("rouletteUserName");
-      sessionStorage.removeItem("roulettePhoneNumber");
+      localStorage.removeItem("rouletteToken");
+      localStorage.removeItem("rouletteUserName");
+      localStorage.removeItem("roulettePhoneNumber");
 
       window.dispatchEvent(new Event("localStorageChange"));
     } catch (err) {
@@ -389,7 +392,13 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
       <div
         className={`w-full max-w-5xl mx-auto flex ${
           isLargeScreen ? "flex-row" : "flex-col"
-        } items-center justify-center ${isLargeScreen ? "gap-4" : "gap-2"}`}
+        } items-center justify-center ${isLargeScreen ? "gap-4" : "gap-2"} ${
+          mustSpin ? "overflow-hidden" : ""
+        }`}
+        style={{
+          position: mustSpin ? "relative" : "static",
+          height: mustSpin ? "100%" : "auto",
+        }}
       >
         {!isLargeScreen && !showPhoneForm && !success && (
           <motion.div
@@ -431,9 +440,6 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
                 perpendicularText
                 textDistance={isMobile ? 50 : 60}
               />
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
-                <div className="w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-t-[20px] border-t-[#0B322F]"></div>
-              </div>
             </div>
 
             {process.env.NODE_ENV === "development" && (

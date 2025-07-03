@@ -13,21 +13,21 @@ const discountOptions: DiscountOption[] = [
     id: 0,
     option: "Бесплатная стрижка",
     value: 100,
-    chance: 10,
+    chance: 5,
     type: "haircut",
   },
   {
     id: 1,
     option: "50%",
     value: 50,
-    chance: 15,
+    chance: 10,
     type: "percentage",
   },
   {
     id: 2,
     option: "30%",
     value: 30,
-    chance: 10,
+    chance: 15,
     type: "percentage",
   },
   {
@@ -55,7 +55,7 @@ const discountOptions: DiscountOption[] = [
     id: 6,
     option: "20% на косметику",
     value: 20,
-    chance: 10,
+    chance: 15,
     type: "cosmetics",
   },
 ];
