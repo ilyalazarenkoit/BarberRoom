@@ -8,19 +8,17 @@ import type { SwiperRef } from "swiper/react";
 import { Scissors } from "phosphor-react";
 import { useTranslation } from "react-i18next";
 
-// Импорт стилей Swiper
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Интерфейс для элементов галереи
 interface GalleryItem {
   id: number;
   imageSrc: string;
 }
 
-// Данные для галереи стрижек
-const haircuts: GalleryItem[] = [
+// Объединяем все фотографии в один массив
+const galleryItems: GalleryItem[] = [
   {
     id: 1,
     imageSrc: "/images/haircut1.jpg",
@@ -41,33 +39,28 @@ const haircuts: GalleryItem[] = [
     id: 5,
     imageSrc: "/images/haircut5.jpg",
   },
-];
-
-// Данные для галереи бороды
-const beards: GalleryItem[] = [
   {
-    id: 1,
+    id: 6,
     imageSrc: "/images/beard1.jpg",
   },
   {
-    id: 2,
+    id: 7,
     imageSrc: "/images/beard2.jpg",
   },
   {
-    id: 3,
+    id: 8,
     imageSrc: "/images/beard3.jpg",
   },
   {
-    id: 4,
+    id: 9,
     imageSrc: "/images/beard4.jpg",
   },
   {
-    id: 5,
+    id: 10,
     imageSrc: "/images/beard5.jpg",
   },
 ];
 
-// Анимации для появления элементов
 const fadeIn = {
   hidden: { opacity: 0 },
   visible: {
@@ -76,44 +69,12 @@ const fadeIn = {
   },
 };
 
-const slideInLeft = {
-  hidden: { x: -50, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
-
-const slideInRight = {
-  hidden: { x: 50, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
-
-// Компонент стандартного слайдера
-const StandardSlider = ({
-  items,
-  direction,
-}: {
-  items: GalleryItem[];
-  direction: "left" | "right";
-}) => {
+const StandardSlider = ({ items }: { items: GalleryItem[] }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
   const swiperRef = useRef<SwiperRef>(null);
   const { t } = useTranslation();
 
-  // Функция для переключения на выбранный слайд
   const handleSlideClick = (index: number) => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideTo(index);
@@ -169,37 +130,17 @@ const StandardSlider = ({
         >
           {items.map((item, index) => (
             <SwiperSlide key={item.id} onClick={() => handleSlideClick(index)}>
-              <div className="bg-gray-100 rounded-lg overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col">
+              <div className="bg-gray-100 rounded-lg overflow-hidden transition-all duration-300 cursor-pointer h-full">
                 <div className="relative h-64 w-full">
                   <Image
                     src={item.imageSrc}
-                    alt={t(
-                      `gallery.${
-                        direction === "left" ? "haircuts" : "beards"
-                      }.${item.id}.name`
-                    )}
+                    alt={t("gallery.photoAlt", { id: item.id })}
                     fill
                     style={{ objectFit: "cover" }}
                     sizes="(max-width: 768px) 100vw, 300px"
+                    className="transition-all duration-300 hover:scale-105 hover:brightness-105"
+                    loading="lazy"
                   />
-                </div>
-                <div className="p-4 flex-grow flex flex-col min-h-[140px]">
-                  <h3 className="font-bold text-[#0B322F] mb-2 text-center text-xl">
-                    {t(
-                      `gallery.${
-                        direction === "left" ? "haircuts" : "beards"
-                      }.${item.id}.name`
-                    )}
-                  </h3>
-                  <div className="flex-grow flex items-center justify-center">
-                    <p className="text-[#0B322F] text-center line-clamp-2 text-lg">
-                      {t(
-                        `gallery.${
-                          direction === "left" ? "haircuts" : "beards"
-                        }.${item.id}.description`
-                      )}
-                    </p>
-                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -264,39 +205,22 @@ export const Gallery = () => {
         </motion.div>
 
         <div>
-          {/* Галерея стрижек */}
+          {/* Объединенная галерея стрижек и бород */}
           <div className="space-y-4 flex items-center flex-col">
             <motion.h3
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              variants={slideInLeft}
+              variants={fadeIn}
               className="text-2xl font-semibold text-gray-600 mb-4 flex items-center gap-2 w-full max-w-md relative"
             >
               <span className="h-px bg-[#0B322F]/30 flex-grow"></span>
               <span className="flex items-center gap-2 px-4">
-                {t("gallery.haircutsTitle")}{" "}
-                <Scissors size={24} weight="fill" />
+                {t("gallery.haircutsAndBeardsTitle")}{" "}
+                <Scissors size={24} weight="bold" />
               </span>
               <span className="h-px bg-[#0B322F]/30 flex-grow"></span>
             </motion.h3>
-            <StandardSlider items={haircuts} direction="left" />
-          </div>
-
-          {/* Галерея бороды */}
-          <div className="space-y-4 mt-8 flex items-center flex-col">
-            <motion.h3
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              variants={slideInRight}
-              className="text-2xl font-semibold text-gray-600 mb-4 flex items-center gap-2 w-full max-w-md relative"
-            >
-              <span className="h-px bg-[#0B322F]/30 flex-grow"></span>
-              <span className="flex items-center gap-2 px-4">
-                {t("gallery.beardsTitle")} <Scissors size={24} weight="fill" />
-              </span>
-              <span className="h-px bg-[#0B322F]/30 flex-grow"></span>
-            </motion.h3>
-            <StandardSlider items={beards} direction="right" />
+            <StandardSlider items={galleryItems} />
           </div>
         </div>
       </div>

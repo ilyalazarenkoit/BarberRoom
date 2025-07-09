@@ -34,6 +34,8 @@
     "subtitle": "Our Works",
     "haircutsTitle": "Haircuts",
     "beardsTitle": "Beards",
+    "haircutsAndBeardsTitle": "Haircuts and Beards",
+    "photoAlt": "Work photo #{{id}}",
     "haircuts": {
       "1": {
         "name": "Classic Elegance",
@@ -89,18 +91,87 @@
     "barber": "Barber",
     "seniorBarber": "Senior Barber",
     "mensHaircut": "Men's Haircut",
+    "longHaircut": "Extended Haircut",
     "beardTrim": "Beard Trim",
     "combo": "Combo (Haircut + Beard)",
     "wax": "Wax",
     "bookJunior": "Book with Junior Barber ({{name}})",
     "bookBarber": "Book with Barber ({{name}})",
-    "bookSenior": "Book with Senior Barber ({{name}})"
+    "bookSenior": "Book with Senior Barber ({{name}})",
+    "priceList": {
+      "mensHaircutJunior": "Men's Haircut (Junior Barber)",
+      "mensHaircutBarber": "Men's Haircut (Barber)",
+      "mensHaircutSenior": "Men's Haircut (Senior Barber)",
+      "longHaircutJunior": "Extended Haircut (Junior Barber)",
+      "longHaircutBarber": "Extended Haircut (Barber)",
+      "longHaircutSenior": "Extended Haircut (Senior Barber)",
+      "beardTrimJunior": "Beard Trim (Junior Barber)",
+      "beardTrimBarber": "Beard Trim (Barber)",
+      "beardTrimSenior": "Beard Trim (Senior Barber)",
+      "comboJunior": "Combo (Haircut + Beard) (Junior Barber)",
+      "comboBarber": "Combo (Haircut + Beard) (Barber)",
+      "comboSenior": "Combo (Haircut + Beard) (Senior Barber)",
+      "waxJunior": "Wax (Junior Barber)",
+      "waxBarber": "Wax (Barber)",
+      "waxSenior": "Wax (Senior Barber)"
+    }
   },
   "barbers": {
     "title": "Our Barbers",
     "subtitle": "Professionals who know everything about men's haircuts and beard care",
     "book": "Book with",
     "barberAlt": "Barber {{name}}",
+    "readMore": "Read More",
+    "backToBarbers": "Back to Barbers",
+    "mainServices": "Main Services",
+    "experience": "Experience",
+    "barberNotFound": "Barber not found",
+    "priceList": "Price List",
+    "positions": {
+      "juniorBarber": "Junior Barber",
+      "barber": "Barber",
+      "seniorBarber": "Senior Barber",
+      "ladyBarber": "Lady Barber"
+    },
+    "names": {
+      "ilya": "Ilya",
+      "slava": "Slava",
+      "bogdan": "Bogdan",
+      "liliya": "Lilia",
+      "egor": "Egor"
+    },
+    "details": {
+      "ilya": {
+        "title": "Senior Barber Ilya",
+        "description": "Experienced barber who knows how to choose the perfect haircut and create a well-groomed beard. Ilya has a clear understanding of which haircut will suit you based on your preferences and his expertise. He has over 1000 satisfied clients, constantly follows trends in barbering, and trains masters at BarberRoom.",
+        "services": "Men's haircuts, children's haircuts (7+ years), beard trimming, waxing",
+        "experience": "7+ years"
+      },
+      "slava": {
+        "title": "Senior Barber Slava",
+        "description": "A master who knows all techniques: from fades to stylish long haircuts. Slava will help you find your unique style, emphasize your individuality, and make your beard well-groomed and neat.",
+        "services": "Men's haircuts, children's haircuts, beard trimming, long haircuts, waxing",
+        "experience": "5+ years"
+      },
+      "bogdan": {
+        "title": "Barber Bogdan",
+        "description": "Setting style in haircuts for over 3 years. He has a high level of skill in men's haircuts and beard work. Bogdan is constantly developing, studying new techniques and trends to achieve even greater mastery in his craft.",
+        "services": "Men's haircuts, children's haircuts (7+ years), beard trimming",
+        "experience": "3+ years"
+      },
+      "egor": {
+        "title": "Barber Egor",
+        "description": "Creative and skilled master with over 2 years of experience. He knows how to reveal your individuality and create a positive atmosphere during your visit. Egor is constantly learning new things, looking for creative solutions, and always follows the latest trends.",
+        "services": "Men's haircuts, children's haircuts (7+ years), beard trimming, waxing",
+        "experience": "2+ years"
+      },
+      "liliya": {
+        "title": "Lady Barber Liliya",
+        "description": "Experienced master with 20 years of experience. She knows all the secrets of men's haircuts, can create the perfect shape, and put your beard in order. Liliya is always open to new things, follows fashion trends, and puts her whole soul into her work.",
+        "services": "Men's haircuts, children's haircuts, beard trimming, long haircuts",
+        "experience": "20+ years"
+      }
+    },
     "team": [
       {
         "name": "Yegor",

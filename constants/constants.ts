@@ -22,19 +22,19 @@ export interface LocalizedMessages {
 
 export const discountMessages = {
   ua: {
-    free: "Добрий день! Вітаємо! Ви виграли безкоштовну стрижку в BarberRoom. Покажіть це повідомлення при відвідуванні.",
-    discount: `Добрий день! Вітаємо! Ви отримали знижку {discount}% на стрижку в BarberRoom. Покажіть це повідомлення при відвідуванні.`,
-    other: `Добрий день! Вітаємо! Ви отримали знижку {discount}% на послуги в BarberRoom. Покажіть це повідомлення при відвідуванні.`,
+    free: "Ви отримали безкоштовну стрижку на майбутній візит.\n*Для знижки покажіть смс барберу.",
+    discount: `Ви отримали -{discount}% на майбутній візит.\n*Для знижки покажіть смс барберу.`,
+    other: `Ви отримали -{discount}% на майбутній візит.\n*Для знижки покажіть смс барберу.`,
   },
   ru: {
-    free: "Добрый день! Поздравляем! Вы выиграли бесплатную стрижку в BarberRoom. Покажите это сообщение при посещении.",
-    discount: `Добрый день! Поздравляем! Вы получили скидку {discount}% на стрижку в BarberRoom. Покажите это сообщение при посещении.`,
-    other: `Добрый день! Поздравляем! Вы получили скидку {discount}% на услуги в BarberRoom. Покажите это сообщение при посещении.`,
+    free: "Вы получили бесплатную стрижку на будущий визит.\n*Для скидки покажите смс барберу.",
+    discount: `Вы получили -{discount}% на будущий визит.\n*Для скидки покажите смс барберу.`,
+    other: `Вы получили -{discount}% на будущий визит.\n*Для скидки покажите смс барберу.`,
   },
   en: {
-    free: "Hello! Congratulations! You won a free haircut at BarberRoom. Show this message when visiting.",
-    discount: `Hello! Congratulations! You received a {discount}% discount on a haircut at BarberRoom. Show this message when visiting.`,
-    other: `Hello! Congratulations! You received a {discount}% discount on services at BarberRoom. Show this message when visiting.`,
+    free: "You received a free haircut for your next visit.\n*To get the discount, show this SMS to your barber.",
+    discount: `You received -{discount}% off for your next visit.\n*To get the discount, show this SMS to your barber.`,
+    other: `You received -{discount}% off for your next visit.\n*To get the discount, show this SMS to your barber.`,
   },
 };
 

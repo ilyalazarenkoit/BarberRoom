@@ -3,42 +3,41 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { CalendarBlank } from "phosphor-react";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 // Данные о мастерах
 const barbers = [
   {
-    name: "Єгор",
-    position: "Молодший барбер",
-    bookingUrl: "https://n1347023.alteg.io",
-    imageSrc: "/images/egor.JPEG",
-    description:
-      "Спеціаліст у класичних чоловічих стрижках. Стаж роботи 2 роки.",
-  },
-  {
-    name: "Богдан",
-    position: "Барбер",
-    bookingUrl: "https://n1366470.alteg.io",
-    imageSrc: "/images/bogdan.jpeg",
-    description:
-      "Експерт у сучасних трендах чоловічих стрижок. Стаж роботи 3 роки.",
-  },
-  {
-    name: "Дима",
-    position: "Барбер",
-    bookingUrl: "https://n1366469.alteg.io",
-    imageSrc: "/images/dima.JPEG",
-    description:
-      "Майстер стильних зачісок та догляду за бородою. Стаж роботи 4 роки.",
-  },
-
-  {
-    name: "Ілля",
-    position: "Старший барбер",
+    slug: "ilya",
+    position: "seniorBarber",
     bookingUrl: "https://n524499.alteg.io",
     imageSrc: "/images/ilya.JPEG",
+  },
+  {
+    slug: "slava",
+    position: "seniorBarber",
+    bookingUrl: "https://n1374585.alteg.io",
+    imageSrc: "/images/slava.JPG",
+  },
+  {
+    slug: "bogdan",
+    position: "barber",
+    bookingUrl: "https://n1366470.alteg.io",
+    imageSrc: "/images/bogdan.jpeg",
+  },
 
-    description:
-      "Майстер вищого класу з великим досвідом. Стаж роботи 7 років.",
+  {
+    slug: "liliya",
+    position: "ladyBarber",
+    bookingUrl: "https://n1374583.alteg.io",
+    imageSrc: "/images/liliya.jpeg",
+  },
+
+  {
+    slug: "egor",
+    position: "barber",
+    bookingUrl: "https://n1347023.alteg.io",
+    imageSrc: "/images/egor.JPEG",
   },
 ];
 
@@ -125,7 +124,7 @@ export const Barbers = () => {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {barbers.map((barber, index) => (
             <motion.div
               key={index}
@@ -133,41 +132,63 @@ export const Barbers = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInUp}
-              className="bg-white rounded-lg overflow-hidden shadow-md"
+              className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+              whileHover={{
+                boxShadow: "0 10px 25px -5px rgba(11, 50, 47, 0.15)",
+                translateY: -5,
+              }}
+              transition={{ duration: 0.3 }}
             >
-              <div className="relative h-80">
-                <Image
-                  src={barber.imageSrc}
-                  alt={t("barbers.barberAlt", { name: barber.name })}
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
+              <Link href={`/barbers/${barber.slug}`} className="block">
+                <div className="relative h-80 xs:h-96 sm:h-[28rem] md:h-80 overflow-hidden group">
+                  <motion.div
+                    className="w-full h-full"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <Image
+                      src={barber.imageSrc}
+                      alt={t("barbers.barberAlt", {
+                        name: t(`barbers.names.${barber.slug}`),
+                      })}
+                      fill
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "center 15%",
+                        filter: "brightness(0.9)",
+                      }}
+                      className="transition-all duration-1000 group-hover:brightness-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent h-24 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 flex items-center justify-center">
+                      <span className="text-white font-medium text-sm transition-opacity duration-1000 delay-1000 opacity-0 group-hover:opacity-100 relative bottom-[calc(0.1rem)]">
+                        {t("barbers.readMore")}
+                      </span>
+                    </div>
+                  </motion.div>
+                </div>
+              </Link>
               <div className="p-4">
-                <h3 className="text-xl font-bold text-[#0B322F]">
-                  {t(`barbers.team.${index}.name`, { name: barber.name })}
-                </h3>
-                <p className="text-gray-600 mb-2">
-                  {t(`barbers.team.${index}.position`, {
-                    position: barber.position,
-                  })}
-                </p>
-                <p className="text-gray-700 mb-4">
-                  {t(`barbers.team.${index}.description`, {
-                    description: barber.description,
-                  })}
-                </p>
+                <Link href={`/barbers/${barber.slug}`} className="block">
+                  <h3 className="text-xl font-bold text-[#0B322F]">
+                    {t(`barbers.names.${barber.slug}`)}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {t(`barbers.positions.${barber.position}`)}
+                  </p>
+                </Link>
                 <div className="flex w-full">
                   <motion.a
                     href={barber.bookingUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 bg-[#0B322F] text-white hover:bg-[#0f3d39] border border-[#0B322F] px-4 py-2 rounded-md font-medium"
+                    className="flex items-center space-x-2 bg-[#0B322F] text-white hover:bg-[#0f3d39] border border-[#0B322F] px-4 py-2 rounded-md font-medium w-full justify-center"
                     whileHover={{
                       scale: 1.02,
                       boxShadow: "0 4px 6px -1px rgba(11, 50, 47, 0.2)",
                     }}
                     transition={{ duration: 0.4 }}
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <CalendarBlank size={24} weight="bold" />
                     <span>{t("header.booking")}</span>

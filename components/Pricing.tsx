@@ -117,30 +117,6 @@ export const Pricing = () => {
                 <span className="font-bold">100 ₴</span>
               </li>
             </ul>
-            <div className="mt-6 flex flex-col space-y-3">
-              <motion.a
-                href="https://n1347023.alteg.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 bg-white text-[#0B322F] hover:bg-gray-100 border border-[#0B322F] px-3 py-2 rounded-md font-medium h-12 w-full"
-                whileHover={{
-                  scale: 1.02,
-                  boxShadow: "0 4px 6px -1px rgba(11, 50, 47, 0.2)",
-                }}
-                transition={{ duration: 0.4 }}
-              >
-                <CalendarBlank
-                  size={20}
-                  weight="bold"
-                  className="flex-shrink-0"
-                />
-                <span className="truncate">
-                  {t("services.bookJunior", {
-                    name: t("barbers.team.0.name"),
-                  })}
-                </span>
-              </motion.a>
-            </div>
           </motion.div>
 
           {/* Барбер */}
@@ -164,7 +140,11 @@ export const Pricing = () => {
             <ul className="space-y-3 mb-auto">
               <li className="flex justify-between items-center border-b pb-2">
                 <span>{t("services.mensHaircut")}</span>
-                <span className="font-bold">450 ₴</span>
+                <span className="font-bold">400/500 ₴</span>
+              </li>
+              <li className="flex justify-between items-center border-b pb-2">
+                <span>{t("services.longHaircut")}</span>
+                <span className="font-bold">500 ₴</span>
               </li>
               <li className="flex justify-between items-center border-b pb-2">
                 <span>{t("services.beardTrim")}</span>
@@ -172,59 +152,13 @@ export const Pricing = () => {
               </li>
               <li className="flex justify-between items-center border-b pb-2">
                 <span>{t("services.combo")}</span>
-                <span className="font-bold">650 ₴</span>
+                <span className="font-bold">650/750 ₴</span>
               </li>
               <li className="flex justify-between items-center">
                 <span>{t("services.wax")}</span>
                 <span className="font-bold">100 ₴</span>
               </li>
             </ul>
-            <div className="mt-6 flex flex-col space-y-3">
-              <motion.a
-                href="https://n408446.alteg.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 bg-white text-[#0B322F] hover:bg-gray-100 border border-[#0B322F] px-3 py-2 rounded-md font-medium h-12 w-full"
-                whileHover={{
-                  scale: 1.02,
-                  boxShadow: "0 4px 6px -1px rgba(11, 50, 47, 0.2)",
-                }}
-                transition={{ duration: 0.4 }}
-              >
-                <CalendarBlank
-                  size={20}
-                  weight="bold"
-                  className="flex-shrink-0"
-                />
-                <span className="truncate">
-                  {t("services.bookBarber", {
-                    name: t("barbers.team.2.name"),
-                  })}
-                </span>
-              </motion.a>
-              <motion.a
-                href="https://n1366470.alteg.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 bg-white text-[#0B322F] hover:bg-gray-100 border border-[#0B322F] px-3 py-2 rounded-md font-medium h-12 w-full"
-                whileHover={{
-                  scale: 1.02,
-                  boxShadow: "0 4px 6px -1px rgba(11, 50, 47, 0.2)",
-                }}
-                transition={{ duration: 0.4 }}
-              >
-                <CalendarBlank
-                  size={20}
-                  weight="bold"
-                  className="flex-shrink-0"
-                />
-                <span className="truncate">
-                  {t("services.bookBarber", {
-                    name: t("barbers.team.1.name"),
-                  })}
-                </span>
-              </motion.a>
-            </div>
           </motion.div>
 
           {/* Старший барбер */}
@@ -250,47 +184,47 @@ export const Pricing = () => {
             <ul className="space-y-3 mb-auto">
               <li className="flex justify-between items-center border-b pb-2">
                 <span>{t("services.mensHaircut")}</span>
-                <span className="font-bold">650 ₴</span>
+                <span className="font-bold">600/650 ₴</span>
               </li>
               <li className="flex justify-between items-center border-b pb-2">
                 <span>{t("services.beardTrim")}</span>
-                <span className="font-bold">300 ₴</span>
+                <span className="font-bold">250/300 ₴</span>
               </li>
               <li className="flex justify-between items-center border-b pb-2">
                 <span>{t("services.combo")}</span>
-                <span className="font-bold">900 ₴</span>
+                <span className="font-bold">850/900 ₴</span>
               </li>
               <li className="flex justify-between items-center">
                 <span>{t("services.wax")}</span>
                 <span className="font-bold">100 ₴</span>
               </li>
             </ul>
-            <div className="mt-6 flex flex-col space-y-3">
-              <motion.a
-                href="https://n524499.alteg.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 bg-white text-[#0B322F] hover:bg-gray-100 border border-[#0B322F] px-3 py-2 rounded-md font-medium h-12 w-full"
-                whileHover={{
-                  scale: 1.02,
-                  boxShadow: "0 4px 6px -1px rgba(11, 50, 47, 0.2)",
-                }}
-                transition={{ duration: 0.4 }}
-              >
-                <CalendarBlank
-                  size={20}
-                  weight="bold"
-                  className="flex-shrink-0"
-                />
-                <span className="truncate">
-                  {t("services.bookSenior", {
-                    name: t("barbers.team.3.name"),
-                  })}
-                </span>
-              </motion.a>
-            </div>
           </motion.div>
         </div>
+
+        {/* Общая кнопка записи */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+          className="mt-10 flex justify-center"
+        >
+          <motion.a
+            href="https://n408446.alteg.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center space-x-2 bg-white text-[#0B322F] hover:bg-gray-100 border border-[#0B322F] px-8 py-4 rounded-md font-medium text-lg w-full md:w-auto md:min-w-[250px]"
+            whileHover={{
+              scale: 1.02,
+              boxShadow: "0 4px 6px -1px rgba(11, 50, 47, 0.2)",
+            }}
+            transition={{ duration: 0.4 }}
+          >
+            <CalendarBlank size={24} weight="bold" className="flex-shrink-0" />
+            <span className="truncate">{t("header.book")}</span>
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );

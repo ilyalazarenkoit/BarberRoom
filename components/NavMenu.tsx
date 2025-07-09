@@ -5,6 +5,7 @@ import Link from "next/link";
 import { X, Phone, InstagramLogo } from "phosphor-react";
 import { useTranslation } from "react-i18next";
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 interface NavMenuProps {
   isOpen: boolean;
@@ -14,6 +15,7 @@ interface NavMenuProps {
 export const NavMenu = ({ isOpen, onClose }: NavMenuProps) => {
   const { t } = useTranslation();
   const menuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   // Предотвращаем прокрутку при касании
   const preventScroll = (e: TouchEvent) => {
@@ -119,6 +121,9 @@ export const NavMenu = ({ isOpen, onClose }: NavMenuProps) => {
     { name: t("header.contacts"), href: "#contacts" },
   ];
 
+  // Проверяем, находимся ли мы на главной странице
+  const isHomePage = pathname === "/";
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -166,13 +171,25 @@ export const NavMenu = ({ isOpen, onClose }: NavMenuProps) => {
                   initial="hidden"
                   animate="visible"
                 >
-                  <Link
-                    href={item.href}
-                    onClick={onClose}
-                    className="block py-4 text-xl font-medium text-[#0B322F] border-b border-gray-100 hover:text-opacity-80 transition-colors"
-                  >
-                    {item.name}
-                  </Link>
+                  {isHomePage ? (
+                    // Если мы на главной странице, используем якорные ссылки как есть
+                    <Link
+                      href={item.href}
+                      onClick={onClose}
+                      className="block py-4 text-xl font-medium text-[#0B322F] border-b border-gray-100 hover:text-opacity-80 transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    // Если мы на любой другой странице, перенаправляем на главную с якорем
+                    <Link
+                      href={`/${item.href}`}
+                      onClick={onClose}
+                      className="block py-4 text-xl font-medium text-[#0B322F] border-b border-gray-100 hover:text-opacity-80 transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                 </motion.div>
               ))}
 
