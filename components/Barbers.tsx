@@ -8,6 +8,24 @@ import Link from "next/link";
 // Данные о мастерах
 const barbers = [
   {
+    slug: "egor",
+    position: "barber",
+    bookingUrl: "https://n1347023.alteg.io",
+    imageSrc: "/images/egor.JPEG",
+  },
+  {
+    slug: "liliya",
+    position: "ladyBarber",
+    bookingUrl: "https://n1374583.alteg.io",
+    imageSrc: "/images/liliya.jpeg",
+  },
+  {
+    slug: "bogdan",
+    position: "barber",
+    bookingUrl: "https://n1366470.alteg.io",
+    imageSrc: "/images/bogdan.jpeg",
+  },
+  {
     slug: "ilya",
     position: "seniorBarber",
     bookingUrl: "https://n524499.alteg.io",
@@ -18,26 +36,6 @@ const barbers = [
     position: "seniorBarber",
     bookingUrl: "https://n1374585.alteg.io",
     imageSrc: "/images/slava.JPG",
-  },
-  {
-    slug: "bogdan",
-    position: "barber",
-    bookingUrl: "https://n1366470.alteg.io",
-    imageSrc: "/images/bogdan.jpeg",
-  },
-
-  {
-    slug: "liliya",
-    position: "ladyBarber",
-    bookingUrl: "https://n1374583.alteg.io",
-    imageSrc: "/images/liliya.jpeg",
-  },
-
-  {
-    slug: "egor",
-    position: "barber",
-    bookingUrl: "https://n1347023.alteg.io",
-    imageSrc: "/images/egor.JPEG",
   },
 ];
 
@@ -161,7 +159,7 @@ export const Barbers = () => {
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                     />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent h-24 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 flex items-center justify-center">
-                      <span className="text-white font-medium text-sm transition-opacity duration-1000 delay-1000 opacity-0 group-hover:opacity-100 relative bottom-[calc(0.1rem)]">
+                      <span className="text-white font-medium text-base sm:text-sm transition-opacity duration-1000 opacity-0 group-hover:opacity-100 relative bottom-[calc(0.1rem)]">
                         {t("barbers.readMore")}
                       </span>
                     </div>
