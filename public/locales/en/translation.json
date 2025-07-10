@@ -11,7 +11,7 @@
     "workHours": "Mon-Sun from 10:00 to 20:00",
     "book": "Book",
     "booking": "Book Now",
-    "phone": "+38 012 345 67 89"
+    "phone": "+38 093 219 41 51"
   },
   "navMenu": {
     "close": "Close",
@@ -250,7 +250,7 @@
       "enterPhone": "Enter your phone number in the form",
       "getSms": "Receive an SMS with your discount confirmation",
       "mentionDiscount": "Mention your discount when booking an appointment",
-      "showCode": "Show the SMS with your discount to the administrator before payment"
+      "showCode": "Show the SMS with your discount to the barber before payment"
     },
     "questions": "* For any questions about the promotion, please contact the phone number listed on the website."
   }

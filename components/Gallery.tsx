@@ -25,39 +25,44 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 2,
-    imageSrc: "/images/haircut2.jpg",
+    imageSrc: "/images/haircut2.JPG",
   },
   {
     id: 3,
-    imageSrc: "/images/haircut3.jpg",
+    imageSrc: "/images/haircut3.JPG",
   },
   {
     id: 4,
-    imageSrc: "/images/haircut4.jpg",
+
+    imageSrc: "/images/beard1.JPG",
   },
   {
     id: 5,
-    imageSrc: "/images/haircut5.jpg",
+    imageSrc: "/images/haircut5.JPG",
   },
   {
     id: 6,
-    imageSrc: "/images/beard1.jpg",
+    imageSrc: "/images/haircut4.JPG",
   },
   {
     id: 7,
-    imageSrc: "/images/beard2.jpg",
+    imageSrc: "/images/beard2.JPG",
   },
   {
     id: 8,
-    imageSrc: "/images/beard3.jpg",
+    imageSrc: "/images/haircut6.JPG",
   },
   {
     id: 9,
-    imageSrc: "/images/beard4.jpg",
+    imageSrc: "/images/haircut7.jpeg",
   },
   {
     id: 10,
-    imageSrc: "/images/beard5.jpg",
+    imageSrc: "/images/haircut8.JPG",
+  },
+  {
+    id: 11,
+    imageSrc: "/images/haircut9.JPG",
   },
 ];
 
@@ -131,7 +136,7 @@ const StandardSlider = ({ items }: { items: GalleryItem[] }) => {
           {items.map((item, index) => (
             <SwiperSlide key={item.id} onClick={() => handleSlideClick(index)}>
               <div className="bg-gray-100 rounded-lg overflow-hidden transition-all duration-300 cursor-pointer h-full">
-                <div className="relative h-64 w-full">
+                <div className="relative h-96 md:h-[28rem] w-full">
                   <Image
                     src={item.imageSrc}
                     alt={t("gallery.photoAlt", { id: item.id })}

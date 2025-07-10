@@ -72,7 +72,7 @@ export const Footer = () => {
                 </div>
                 <div className="ml-3">
                   <a
-                    href="tel:+380123456789"
+                    href="tel:+380932194151"
                     className="hover:opacity-80 transition-opacity duration-300"
                   >
                     <h3 className="font-semibold">{t("footer.phone")}</h3>

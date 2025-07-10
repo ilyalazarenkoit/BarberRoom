@@ -68,14 +68,6 @@ export const Pricing = () => {
               </span>
             </motion.h2>
           </motion.div>
-          <div className="mt-12">
-            <motion.h3
-              variants={fadeInUp}
-              className="text-md md:text-lg font-semibold text-gray-600 max-w-2xl mx-auto"
-            >
-              {t("services.subtitle")}
-            </motion.h3>
-          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

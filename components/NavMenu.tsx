@@ -221,7 +221,7 @@ export const NavMenu = ({ isOpen, onClose }: NavMenuProps) => {
                 animate="visible"
               >
                 <motion.a
-                  href="tel:+380123456789"
+                  href="tel:+380932194151"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-3 rounded-full hover:bg-gray-100 border border-[#0B322F]"

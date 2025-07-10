@@ -93,7 +93,7 @@ export const Header = () => {
         <div className="hidden md:flex items-center space-x-6">
           <div className="flex items-center space-x-2">
             <motion.a
-              href="tel:+380123456789"
+              href="tel:+380932194151"
               className="flex items-center space-x-2 text-[#0B322F] font-medium"
               aria-label="Call us"
               whileHover={{ scale: 1.02 }}
