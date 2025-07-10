@@ -25,32 +25,32 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 2,
-    imageSrc: "/images/haircut2.JPG",
+    imageSrc: "/images/haircut2.jpg",
   },
   {
     id: 3,
-    imageSrc: "/images/haircut3.JPG",
+    imageSrc: "/images/haircut3.jpg",
   },
   {
     id: 4,
 
-    imageSrc: "/images/beard1.JPG",
+    imageSrc: "/images/beard1.jpg",
   },
   {
     id: 5,
-    imageSrc: "/images/haircut5.JPG",
+    imageSrc: "/images/haircut5.jpg",
   },
   {
     id: 6,
-    imageSrc: "/images/haircut4.JPG",
+    imageSrc: "/images/haircut4.jpg",
   },
   {
     id: 7,
-    imageSrc: "/images/beard2.JPG",
+    imageSrc: "/images/beard2.jpg",
   },
   {
     id: 8,
-    imageSrc: "/images/haircut6.JPG",
+    imageSrc: "/images/haircut6.jpg",
   },
   {
     id: 9,
@@ -58,11 +58,11 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 10,
-    imageSrc: "/images/haircut8.JPG",
+    imageSrc: "/images/haircut8.jpg",
   },
   {
     id: 11,
-    imageSrc: "/images/haircut9.JPG",
+    imageSrc: "/images/haircut9.jpg",
   },
 ];
 
