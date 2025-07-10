@@ -50,7 +50,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 8,
-    imageSrc: "/images/haircut6.jpg",
+    imageSrc: "/images/haircut6.JPG",
   },
   {
     id: 9,
