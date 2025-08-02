@@ -1,0 +1,257 @@
+{
+  "common": {
+    "close": "Schließen"
+  },
+  "header": {
+    "gallery": "Galerie",
+    "services": "Dienstleistungen",
+    "barbers": "Barbiere",
+    "contacts": "Kontakte",
+    "address": "Darnytsia, Budivelnykiv St. 32/2",
+    "workHours": "Mo-So von 10:00 bis 20:00",
+    "book": "Buchen",
+    "booking": "Jetzt Buchen",
+    "phone": "+38 093 219 41 51"
+  },
+  "navMenu": {
+    "close": "Schließen",
+    "phone": "Telefon",
+    "workHours": "Öffnungszeiten"
+  },
+  "language": {
+    "de": "Deutsch",
+    "fr": "Französisch",
+    "en": "Englisch"
+  },
+  "main": {
+    "title": "Dein Stil - unsere Arbeit",
+    "subtitle": "Professionelle Barbiere, hochwertige Materialien und die Atmosphäre eines echten Männerclubs",
+    "book": "Jetzt Buchen",
+    "interiorAlt": "Barbershop Interieur"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Unsere Arbeiten",
+    "haircutsTitle": "Haarschnitte",
+    "beardsTitle": "Bärte",
+    "haircutsAndBeardsTitle": "Haarschnitte und Bärte",
+    "photoAlt": "Arbeitsfoto #{{id}}",
+    "haircuts": {
+      "1": {
+        "name": "Klassische Eleganz",
+        "description": "Makelloser Stil für selbstbewusste Männer"
+      },
+      "2": {
+        "name": "Moderner Fade",
+        "description": "Zeitgemäßer Farbverlauf mit Betonung der Individualität"
+      },
+      "3": {
+        "name": "Urbaner Stil",
+        "description": "Stilvolle Lässigkeit für den Rhythmus des Stadtlebens"
+      },
+      "4": {
+        "name": "Business-Charme",
+        "description": "Perfekte Balance zwischen Konservatismus und modernen Trends"
+      },
+      "5": {
+        "name": "Kreativer Undercut",
+        "description": "Ausdrucksstarker Stil für diejenigen, die keine Angst haben, aufzufallen"
+      }
+    },
+    "beards": {
+      "1": {
+        "name": "Gepflegter Bart",
+        "description": "Perfekte Betonung von Männlichkeit und Charakter"
+      },
+      "2": {
+        "name": "Königliche Kontur",
+        "description": "Klare Linien und Form, die Gesichtszüge hervorheben"
+      },
+      "3": {
+        "name": "Stilvolle Formgebung",
+        "description": "Ordentlichkeit und Liebe zum Detail in jeder Linie"
+      },
+      "4": {
+        "name": "Eleganter Stoppelbart",
+        "description": "Minimalismus, der Charme und Männlichkeit verleiht"
+      },
+      "5": {
+        "name": "Vollbart",
+        "description": "Verkörperung von Stärke und Selbstvertrauen in jedem Haar"
+      }
+    }
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "subtitle": "Wir bieten eine breite Palette von Haar- und Bartpflegediensten an",
+    "haircut": "Haarschnitt",
+    "beard": "Bart",
+    "price": "Preis",
+    "juniorBarber": "Junior Barbier",
+    "barber": "Barbier",
+    "seniorBarber": "Senior Barbier",
+    "mensHaircut": "Herrenhaarschnitt",
+    "longHaircut": "Erweiterter Haarschnitt",
+    "beardTrim": "Barttrimmen",
+    "combo": "Kombi (Haarschnitt + Bart)",
+    "wax": "Wachs",
+    "bookJunior": "Buchen mit Junior Barbier ({{name}})",
+    "bookBarber": "Buchen mit Barbier ({{name}})",
+    "bookSenior": "Buchen mit Senior Barbier ({{name}})",
+    "priceList": {
+      "mensHaircutJunior": "Herrenhaarschnitt (Junior Barbier)",
+      "mensHaircutBarber": "Herrenhaarschnitt (Barbier)",
+      "mensHaircutSenior": "Herrenhaarschnitt (Senior Barbier)",
+      "longHaircutJunior": "Erweiterter Haarschnitt (Junior Barbier)",
+      "longHaircutBarber": "Erweiterter Haarschnitt (Barbier)",
+      "longHaircutSenior": "Erweiterter Haarschnitt (Senior Barbier)",
+      "beardTrimJunior": "Barttrimmen (Junior Barbier)",
+      "beardTrimBarber": "Barttrimmen (Barbier)",
+      "beardTrimSenior": "Barttrimmen (Senior Barbier)",
+      "comboJunior": "Kombi (Haarschnitt + Bart) (Junior Barbier)",
+      "comboBarber": "Kombi (Haarschnitt + Bart) (Barbier)",
+      "comboSenior": "Kombi (Haarschnitt + Bart) (Senior Barbier)",
+      "waxJunior": "Wachs (Junior Barbier)",
+      "waxBarber": "Wachs (Barbier)",
+      "waxSenior": "Wachs (Senior Barbier)"
+    }
+  },
+  "barbers": {
+    "title": "Unsere Barbiere",
+    "subtitle": "Profis, die alles über Herrenhaarschnitte und Bartpflege wissen",
+    "book": "Buchen mit",
+    "barberAlt": "Barbier {{name}}",
+    "readMore": "Mehr Lesen",
+    "backToBarbers": "Zurück zu Barbieren",
+    "mainServices": "Hauptdienstleistungen",
+    "experience": "Erfahrung",
+    "barberNotFound": "Barbier nicht gefunden",
+    "priceList": "Preisliste",
+    "positions": {
+      "juniorBarber": "Junior Barbier",
+      "barber": "Barbier",
+      "seniorBarber": "Senior Barbier",
+      "ladyBarber": "Damen Barbier"
+    },
+    "names": {
+      "ilya": "Ilya",
+      "slava": "Slava",
+      "bogdan": "Bogdan",
+      "liliya": "Lilia",
+      "egor": "Egor"
+    },
+    "details": {
+      "ilya": {
+        "title": "Senior Barbier Ilya",
+        "description": "Erfahrener Barbier, der weiß, wie man den perfekten Haarschnitt wählt und einen gepflegten Bart kreiert. Ilya hat ein klares Verständnis davon, welcher Haarschnitt zu Ihnen passt, basierend auf Ihren Vorlieben und seiner Expertise. Er hat über 1000 zufriedene Kunden, verfolgt ständig Trends im Barbierhandwerk und bildet Meister bei BarberRoom aus.",
+        "services": "Herrenhaarschnitte, Kinderhaarschnitte (ab 7 Jahren), Barttrimmen, Wachsen",
+        "experience": "7+ Jahre"
+      },
+      "slava": {
+        "title": "Senior Barbier Slava",
+        "description": "Ein Meister, der alle Techniken beherrscht: von Fades bis hin zu stilvollen langen Haarschnitten. Slava hilft Ihnen, Ihren einzigartigen Stil zu finden, Ihre Individualität zu betonen und Ihren Bart gepflegt und ordentlich zu gestalten.",
+        "services": "Herrenhaarschnitte, Kinderhaarschnitte, Barttrimmen, lange Haarschnitte, Wachsen",
+        "experience": "5+ Jahre"
+      },
+      "bogdan": {
+        "title": "Barbier Bogdan",
+        "description": "Setzt seit über 3 Jahren Stil in Haarschnitten. Er verfügt über ein hohes Maß an Können bei Herrenhaarschnitten und Bartarbeiten. Bogdan entwickelt sich ständig weiter, studiert neue Techniken und Trends, um eine noch größere Meisterschaft in seinem Handwerk zu erreichen.",
+        "services": "Herrenhaarschnitte, Kinderhaarschnitte (ab 7 Jahren), Barttrimmen",
+        "experience": "3+ Jahre"
+      },
+      "egor": {
+        "title": "Barbier Egor",
+        "description": "Kreativer und geschickter Meister mit über 2 Jahren Erfahrung. Er weiß, wie man Ihre Individualität zum Vorschein bringt und eine positive Atmosphäre während Ihres Besuchs schafft. Egor lernt ständig Neues, sucht nach kreativen Lösungen und folgt immer den neuesten Trends.",
+        "services": "Herrenhaarschnitte, Kinderhaarschnitte (ab 7 Jahren), Barttrimmen, Wachsen",
+        "experience": "2+ Jahre"
+      },
+      "liliya": {
+        "title": "Damen Barbier Liliya",
+        "description": "Erfahrene Meisterin mit 20 Jahren Erfahrung. Sie kennt alle Geheimnisse von Herrenhaarschnitten, kann die perfekte Form kreieren und Ihren Bart in Ordnung bringen. Liliya ist immer offen für Neues, folgt Modetrends und legt ihre ganze Seele in ihre Arbeit.",
+        "services": "Herrenhaarschnitte, Kinderhaarschnitte, Barttrimmen, lange Haarschnitte",
+        "experience": "20+ Jahre"
+      }
+    },
+    "team": [
+      {
+        "name": "Yegor",
+        "position": "Junior Barbier",
+        "description": "Spezialist für klassische Herrenhaarschnitte. 2 Jahre Erfahrung."
+      },
+      {
+        "name": "Bogdan",
+        "position": "Barbier",
+        "description": "Experte für moderne Trends bei Herrenhaarschnitten. 3 Jahre Erfahrung."
+      },
+      {
+        "name": "Dima",
+        "position": "Barbier",
+        "description": "Meister für stilvolle Haarschnitte und Bartpflege. 4 Jahre Erfahrung."
+      },
+      {
+        "name": "Ilya",
+        "position": "Senior Barbier",
+        "description": "Meister der Spitzenklasse mit umfangreicher Erfahrung. 7 Jahre Erfahrung."
+      }
+    ]
+  },
+  "footer": {
+    "address": "Adresse",
+    "phone": "Telefon",
+    "workHours": "Öffnungszeiten",
+    "email": "E-Mail",
+    "social": "Soziale Medien",
+    "copyright": "Barber Room, Alle Rechte vorbehalten",
+    "openMap": "Auf Google Maps öffnen"
+  },
+  "roulette": {
+    "title": "Holen Sie sich Ihren Rabatt",
+    "description": "Drehen Sie das Rad und erhalten Sie einen Rabatt für unsere Barbershop-Dienstleistungen",
+    "spinButton": "Rad Drehen",
+    "alreadySpun": "Sie haben bereits einen Rabatt erhalten",
+    "alreadyHasDiscount": "Sie haben bereits früher einen Rabatt erhalten",
+    "spinFailed": "Fehler beim Abrufen des Drehergebnisses",
+    "resultError": "Fehler bei der Bestimmung des Ergebnisses",
+    "errorButContinue": "Ein Fehler ist aufgetreten, aber wir haben Ihren Rabatt trotzdem ermittelt",
+    "congratulations": "Herzlichen Glückwunsch! Sie haben einen Rabatt von",
+    "enterPhonePrompt": "Geben Sie Ihre Daten ein, um den Rabatt zu erhalten",
+    "nameLabel": "Name",
+    "namePlaceholder": "Ihr Name",
+    "phoneLabel": "Telefonnummer",
+    "enterValidPhone": "Bitte geben Sie eine gültige Telefonnummer ein",
+    "enterName": "Bitte geben Sie Ihren Namen ein",
+    "sending": "Senden...",
+    "getDiscount": "Rabatt Erhalten",
+    "submitError": "Beim Übermitteln Ihrer Daten ist ein Fehler aufgetreten",
+    "discountSuccess": "Herzlichen Glückwunsch! Der Rabatt wurde erfolgreich mit Ihrer Telefonnummer verknüpft",
+    "discountSmsSuccess": "Die Rabattbestätigung wurde per SMS an Ihr Telefon gesendet. Bitte überprüfen Sie Ihre Nachrichten und zeigen Sie die SMS unserem Administrator, um Ihren Rabatt zu erhalten.",
+    "resetButton": "Zurücksetzen (nur zum Testen)",
+    "discountTerms": "* Rabatt gilt für Ihren ersten Haarschnitt. Ein Rabatt pro Telefonnummer.",
+    "viewFullTerms": "Vollständige Geschäftsbedingungen anzeigen"
+  },
+  "discountButton": {
+    "getDiscount": "Rabatt Erhalten"
+  },
+  "discountTerms": {
+    "title": "Rabattbedingungen",
+    "rulesTitle": "Rabattregeln",
+    "rules": {
+      "firstHaircut": "Rabatt gilt nur für Ihren ersten Haarschnitt in unserem Barbershop",
+      "onePerPhone": "Ein Rabatt pro Telefonnummer",
+      "validity": "Rabatt ist 30 Tage ab Erhalt gültig",
+      "showSms": "Um den Rabatt zu nutzen, zeigen Sie die SMS-Nachricht mit Ihrer Rabattbestätigung",
+      "notCombined": "Rabatt kann nicht mit anderen Aktionen kombiniert werden",
+      "notForProducts": "Rabatt gilt nicht für Haar- und Bartpflegeprodukte",
+      "rightToChange": "Die Barbershop-Verwaltung behält sich das Recht vor, die Aktionsbedingungen zu ändern"
+    },
+    "howToUseTitle": "Wie Sie Ihren Rabatt nutzen können",
+    "howToUse": {
+      "spinWheel": "Drehen Sie das Rad und erhalten Sie Ihren Rabatt",
+      "enterPhone": "Geben Sie Ihre Telefonnummer im Formular ein",
+      "getSms": "Erhalten Sie eine SMS mit Ihrer Rabattbestätigung",
+      "mentionDiscount": "Erwähnen Sie Ihren Rabatt bei der Terminbuchung",
+      "showCode": "Zeigen Sie die SMS mit Ihrem Rabatt dem Barbier vor der Zahlung"
+    },
+    "questions": "* Bei Fragen zur Aktion wenden Sie sich bitte an die auf der Website angegebene Telefonnummer."
+  }
+}

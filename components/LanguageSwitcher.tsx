@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useClientI18n } from "@/lib/i18n/client";
 
 export const LanguageSwitcher = () => {
-  const [currentLang, setCurrentLang] = useState("ua");
+  const [currentLang, setCurrentLang] = useState("en");
   const [isOpen, setIsOpen] = useState(false);
   const { i18n, t } = useTranslation();
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -15,7 +15,7 @@ export const LanguageSwitcher = () => {
   useClientI18n();
 
   useEffect(() => {
-    setCurrentLang(i18n.language || "ua");
+    setCurrentLang(i18n.language || "en");
 
     const handleLanguageChanged = (lng: string) => {
       setCurrentLang(lng);
@@ -47,15 +47,19 @@ export const LanguageSwitcher = () => {
   };
 
   const languages = {
+    en: t("language.en", "English"),
+    de: t("language.de", "Deutsch"),
+    fr: t("language.fr", "Français"),
     ua: t("language.ua", "Українська"),
     ru: t("language.ru", "Русский"),
-    en: t("language.en", "English"),
   };
 
   const languageCodes = {
+    en: "EN",
+    de: "DE",
+    fr: "FR",
     ua: "UA",
     ru: "RU",
-    en: "EN",
   };
 
   return (
@@ -69,7 +73,7 @@ export const LanguageSwitcher = () => {
         aria-label={t("header.changeLanguage", "Change language")}
         aria-expanded={isOpen}
       >
-        {languageCodes[currentLang as keyof typeof languageCodes]}
+        {languageCodes[currentLang as keyof typeof languageCodes] || "EN"}
       </motion.button>
 
       <AnimatePresence>

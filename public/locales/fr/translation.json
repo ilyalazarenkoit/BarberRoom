@@ -1,0 +1,257 @@
+{
+  "common": {
+    "close": "Fermer"
+  },
+  "header": {
+    "gallery": "Galerie",
+    "services": "Services",
+    "barbers": "Barbiers",
+    "contacts": "Contacts",
+    "address": "Darnytsia, Budivelnykiv St. 32/2",
+    "workHours": "Lun-Dim de 10h00 à 20h00",
+    "book": "Réserver",
+    "booking": "Réserver Maintenant",
+    "phone": "+38 093 219 41 51"
+  },
+  "navMenu": {
+    "close": "Fermer",
+    "phone": "Téléphone",
+    "workHours": "Heures d'ouverture"
+  },
+  "language": {
+    "de": "Allemand",
+    "fr": "Français",
+    "en": "Anglais"
+  },
+  "main": {
+    "title": "Votre style - notre travail",
+    "subtitle": "Barbiers professionnels, matériaux de qualité et l'ambiance d'un véritable club pour hommes",
+    "book": "Réserver Maintenant",
+    "interiorAlt": "Intérieur du salon de coiffure"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Nos Travaux",
+    "haircutsTitle": "Coupes de cheveux",
+    "beardsTitle": "Barbes",
+    "haircutsAndBeardsTitle": "Coupes de cheveux et barbes",
+    "photoAlt": "Photo de travail #{{id}}",
+    "haircuts": {
+      "1": {
+        "name": "Élégance Classique",
+        "description": "Style impeccable pour hommes confiants"
+      },
+      "2": {
+        "name": "Dégradé Moderne",
+        "description": "Transition en dégradé contemporaine avec accent sur l'individualité"
+      },
+      "3": {
+        "name": "Style Urbain",
+        "description": "Décontraction stylée pour le rythme urbain de la vie"
+      },
+      "4": {
+        "name": "Charme d'Affaires",
+        "description": "Équilibre parfait entre conservatisme et tendances modernes"
+      },
+      "5": {
+        "name": "Undercut Créatif",
+        "description": "Style expressif pour ceux qui n'ont pas peur de se démarquer"
+      }
+    },
+    "beards": {
+      "1": {
+        "name": "Barbe Soignée",
+        "description": "Accent parfait sur la masculinité et le caractère"
+      },
+      "2": {
+        "name": "Contour Royal",
+        "description": "Lignes claires et forme qui mettent en valeur les traits du visage"
+      },
+      "3": {
+        "name": "Mise en Forme Stylée",
+        "description": "Netteté et attention aux détails dans chaque ligne"
+      },
+      "4": {
+        "name": "Barbe de Trois Jours Élégante",
+        "description": "Minimalisme qui ajoute du charme et de la masculinité"
+      },
+      "5": {
+        "name": "Barbe Complète",
+        "description": "Incarnation de la force et de la confiance dans chaque poil"
+      }
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Nous offrons une large gamme de services de soins pour cheveux et barbe",
+    "haircut": "Coupe de cheveux",
+    "beard": "Barbe",
+    "price": "Prix",
+    "juniorBarber": "Barbier Junior",
+    "barber": "Barbier",
+    "seniorBarber": "Barbier Senior",
+    "mensHaircut": "Coupe Homme",
+    "longHaircut": "Coupe Longue",
+    "beardTrim": "Taille de Barbe",
+    "combo": "Combo (Coupe + Barbe)",
+    "wax": "Cire",
+    "bookJunior": "Réserver avec Barbier Junior ({{name}})",
+    "bookBarber": "Réserver avec Barbier ({{name}})",
+    "bookSenior": "Réserver avec Barbier Senior ({{name}})",
+    "priceList": {
+      "mensHaircutJunior": "Coupe Homme (Barbier Junior)",
+      "mensHaircutBarber": "Coupe Homme (Barbier)",
+      "mensHaircutSenior": "Coupe Homme (Barbier Senior)",
+      "longHaircutJunior": "Coupe Longue (Barbier Junior)",
+      "longHaircutBarber": "Coupe Longue (Barbier)",
+      "longHaircutSenior": "Coupe Longue (Barbier Senior)",
+      "beardTrimJunior": "Taille de Barbe (Barbier Junior)",
+      "beardTrimBarber": "Taille de Barbe (Barbier)",
+      "beardTrimSenior": "Taille de Barbe (Barbier Senior)",
+      "comboJunior": "Combo (Coupe + Barbe) (Barbier Junior)",
+      "comboBarber": "Combo (Coupe + Barbe) (Barbier)",
+      "comboSenior": "Combo (Coupe + Barbe) (Barbier Senior)",
+      "waxJunior": "Cire (Barbier Junior)",
+      "waxBarber": "Cire (Barbier)",
+      "waxSenior": "Cire (Barbier Senior)"
+    }
+  },
+  "barbers": {
+    "title": "Nos Barbiers",
+    "subtitle": "Des professionnels qui connaissent tout sur les coupes homme et l'entretien de la barbe",
+    "book": "Réserver avec",
+    "barberAlt": "Barbier {{name}}",
+    "readMore": "En Savoir Plus",
+    "backToBarbers": "Retour aux Barbiers",
+    "mainServices": "Services Principaux",
+    "experience": "Expérience",
+    "barberNotFound": "Barbier non trouvé",
+    "priceList": "Liste de Prix",
+    "positions": {
+      "juniorBarber": "Barbier Junior",
+      "barber": "Barbier",
+      "seniorBarber": "Barbier Senior",
+      "ladyBarber": "Barbière"
+    },
+    "names": {
+      "ilya": "Ilya",
+      "slava": "Slava",
+      "bogdan": "Bogdan",
+      "liliya": "Lilia",
+      "egor": "Egor"
+    },
+    "details": {
+      "ilya": {
+        "title": "Barbier Senior Ilya",
+        "description": "Barbier expérimenté qui sait comment choisir la coupe parfaite et créer une barbe bien entretenue. Ilya a une compréhension claire de quelle coupe vous conviendra en fonction de vos préférences et de son expertise. Il a plus de 1000 clients satisfaits, suit constamment les tendances en matière de barbier, et forme des maîtres chez BarberRoom.",
+        "services": "Coupes homme, coupes enfants (7+ ans), taille de barbe, épilation à la cire",
+        "experience": "7+ ans"
+      },
+      "slava": {
+        "title": "Barbier Senior Slava",
+        "description": "Un maître qui connaît toutes les techniques : des dégradés aux coupes longues stylées. Slava vous aidera à trouver votre style unique, à souligner votre individualité, et à rendre votre barbe bien entretenue et soignée.",
+        "services": "Coupes homme, coupes enfants, taille de barbe, coupes longues, épilation à la cire",
+        "experience": "5+ ans"
+      },
+      "bogdan": {
+        "title": "Barbier Bogdan",
+        "description": "Définit le style dans les coupes depuis plus de 3 ans. Il possède un haut niveau de compétence dans les coupes homme et le travail de la barbe. Bogdan se développe constamment, étudiant de nouvelles techniques et tendances pour atteindre une maîtrise encore plus grande dans son métier.",
+        "services": "Coupes homme, coupes enfants (7+ ans), taille de barbe",
+        "experience": "3+ ans"
+      },
+      "egor": {
+        "title": "Barbier Egor",
+        "description": "Maître créatif et compétent avec plus de 2 ans d'expérience. Il sait comment révéler votre individualité et créer une atmosphère positive lors de votre visite. Egor apprend constamment de nouvelles choses, cherche des solutions créatives, et suit toujours les dernières tendances.",
+        "services": "Coupes homme, coupes enfants (7+ ans), taille de barbe, épilation à la cire",
+        "experience": "2+ ans"
+      },
+      "liliya": {
+        "title": "Barbière Liliya",
+        "description": "Maître expérimentée avec 20 ans d'expérience. Elle connaît tous les secrets des coupes homme, peut créer la forme parfaite, et mettre votre barbe en ordre. Liliya est toujours ouverte aux nouveautés, suit les tendances de la mode, et met toute son âme dans son travail.",
+        "services": "Coupes homme, coupes enfants, taille de barbe, coupes longues",
+        "experience": "20+ ans"
+      }
+    },
+    "team": [
+      {
+        "name": "Yegor",
+        "position": "Barbier Junior",
+        "description": "Spécialiste des coupes homme classiques. 2 ans d'expérience."
+      },
+      {
+        "name": "Bogdan",
+        "position": "Barbier",
+        "description": "Expert en tendances modernes de coupes homme. 3 ans d'expérience."
+      },
+      {
+        "name": "Dima",
+        "position": "Barbier",
+        "description": "Maître des coupes stylées et de l'entretien de la barbe. 4 ans d'expérience."
+      },
+      {
+        "name": "Ilya",
+        "position": "Barbier Senior",
+        "description": "Maître de haute classe avec une vaste expérience. 7 ans d'expérience."
+      }
+    ]
+  },
+  "footer": {
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "workHours": "Heures d'ouverture",
+    "email": "Email",
+    "social": "Réseaux Sociaux",
+    "copyright": "Barber Room, Tous Droits Réservés",
+    "openMap": "Ouvrir sur Google Maps"
+  },
+  "roulette": {
+    "title": "Obtenez Votre Réduction",
+    "description": "Faites tourner la roue et obtenez une réduction pour nos services de barbier",
+    "spinButton": "Tourner la Roue",
+    "alreadySpun": "Vous avez déjà reçu une réduction",
+    "alreadyHasDiscount": "Vous avez déjà reçu une réduction précédemment",
+    "spinFailed": "Échec de l'obtention du résultat",
+    "resultError": "Erreur lors de la détermination du résultat",
+    "errorButContinue": "Une erreur s'est produite, mais nous avons quand même déterminé votre réduction",
+    "congratulations": "Félicitations ! Vous avez gagné une réduction de",
+    "enterPhonePrompt": "Entrez vos coordonnées pour recevoir la réduction",
+    "nameLabel": "Nom",
+    "namePlaceholder": "Votre nom",
+    "phoneLabel": "Numéro de téléphone",
+    "enterValidPhone": "Veuillez entrer un numéro de téléphone valide",
+    "enterName": "Veuillez entrer votre nom",
+    "sending": "Envoi en cours...",
+    "getDiscount": "Obtenir la Réduction",
+    "submitError": "Une erreur s'est produite lors de la soumission de vos données",
+    "discountSuccess": "Félicitations ! La réduction a été associée avec succès à votre numéro de téléphone",
+    "discountSmsSuccess": "La confirmation de réduction a été envoyée à votre téléphone par SMS. Veuillez vérifier vos messages et montrer le SMS à notre administrateur pour recevoir votre réduction.",
+    "resetButton": "Réinitialiser (pour test uniquement)",
+    "discountTerms": "* La réduction s'applique à votre première coupe. Une réduction par numéro de téléphone.",
+    "viewFullTerms": "Voir les conditions générales complètes"
+  },
+  "discountButton": {
+    "getDiscount": "Obtenir une Réduction"
+  },
+  "discountTerms": {
+    "title": "Conditions de Réduction",
+    "rulesTitle": "Règles de Réduction",
+    "rules": {
+      "firstHaircut": "La réduction s'applique uniquement à votre première coupe dans notre salon",
+      "onePerPhone": "Une réduction par numéro de téléphone",
+      "validity": "La réduction est valable 30 jours à partir de la réception",
+      "showSms": "Pour utiliser la réduction, montrez le message SMS avec votre confirmation de réduction",
+      "notCombined": "La réduction ne peut pas être combinée avec d'autres promotions",
+      "notForProducts": "La réduction ne s'applique pas aux produits de soins pour cheveux et barbe",
+      "rightToChange": "L'administration du salon se réserve le droit de modifier les conditions de la promotion"
+    },
+    "howToUseTitle": "Comment Utiliser Votre Réduction",
+    "howToUse": {
+      "spinWheel": "Faites tourner la roue et obtenez votre réduction",
+      "enterPhone": "Entrez votre numéro de téléphone dans le formulaire",
+      "getSms": "Recevez un SMS avec votre confirmation de réduction",
+      "mentionDiscount": "Mentionnez votre réduction lors de la prise de rendez-vous",
+      "showCode": "Montrez le SMS avec votre réduction au barbier avant le paiement"
+    },
+    "questions": "* Pour toute question concernant la promotion, veuillez contacter le numéro de téléphone indiqué sur le site web."
+  }
+}

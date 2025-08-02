@@ -59,12 +59,12 @@ function isValidDiscountValue(value: number): boolean {
 function formatPhoneForAltegio(phone: string): string {
   const digitsOnly = phone.replace(/\D/g, "");
 
-  if (digitsOnly.startsWith("380")) {
+  if (digitsOnly.startsWith("49")) {
     return `+${digitsOnly}`;
   } else if (digitsOnly.startsWith("0")) {
-    return `+38${digitsOnly}`;
+    return `+49${digitsOnly}`;
   } else {
-    return `+380${digitsOnly}`;
+    return `+49${digitsOnly}`;
   }
 }
 
@@ -187,7 +187,8 @@ async function sendToCRM(
     const createClientBody = {
       name: userName,
       phone: formattedPhone,
-      comment: `throws show-off`,
+      comment: `Отримав знижку ${discountValue}%`,
+      categories: ["9316795"],
       sms_check: 1,
     };
 
