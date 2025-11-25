@@ -11,6 +11,8 @@
 
 [Features](#-key-features) • [Tech Stack](#-tech-stack) • [Architecture](#-architecture) • [Getting Started](#-getting-started)
 
+🌐 **Live Demo**: [https://barber-room.vercel.app/](https://barber-room.vercel.app/)
+
 </div>
 
 ---
