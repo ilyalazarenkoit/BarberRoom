@@ -19,6 +19,9 @@
 
 This project is a production-ready, full-stack web application built for a premium barbershop in Kyiv. It combines a beautiful, responsive landing page with an innovative **discount wheel (roulette)** feature that automatically captures leads and integrates them into a CRM system. The application is designed with performance, security, and user experience as top priorities.
 
+
+**🔗 Live Application**: [https://barber-room.vercel.app/](https://barber-room.vercel.app/)
+
 ### 🎯 Business Value
 
 - **Lead Generation**: Automated discount wheel captures new customers with gamified experience
