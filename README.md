@@ -1,11 +1,13 @@
 # 🎯 Barber Room - Modern Barbershop Landing & Lead Generation Platform
-🌐 **Live Demo**: [https://barber-room.vercel.app/](https://barber-room.vercel.app/)
+
 <div align="center">
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.1-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
 ![React](https://img.shields.io/badge/React-18.2-61DAFB?style=for-the-badge&logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)
+
+🌐 **Live Demo**: [https://barber-room.vercel.app/](https://barber-room.vercel.app/)
 
 **A high-performance, multilingual landing page with integrated discount wheel and CRM automation for a premium barbershop in Kyiv**
 
