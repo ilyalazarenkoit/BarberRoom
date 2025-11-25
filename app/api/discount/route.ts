@@ -11,8 +11,8 @@ function getLocalizedMessage(
   lang: string = "ua",
   params?: Record<string, string | number>
 ): string {
-  const supportedLangs = ["ua", "ru", "en"];
-  const defaultLang = "ua";
+  const supportedLangs = ["ua", "ru", "en", "de", "fr"];
+  const defaultLang = "en";
 
   const language = supportedLangs.includes(lang) ? lang : defaultLang;
 
@@ -73,8 +73,8 @@ function getDiscountMessage(
   lang: string = "ua"
 ): string {
   type SupportedLanguage = keyof typeof discountMessages;
-  const supportedLangs: SupportedLanguage[] = ["ua", "ru", "en"];
-  const defaultLang: SupportedLanguage = "ua";
+  const supportedLangs: SupportedLanguage[] = ["ua", "ru", "en", "de", "fr"];
+  const defaultLang: SupportedLanguage = "en";
   const language: SupportedLanguage = supportedLangs.includes(
     lang as SupportedLanguage
   )
@@ -101,7 +101,7 @@ async function getAltegioUserToken(): Promise<string | null> {
     const password = process.env.ALTEGIO_USER_PASSWORD;
     console.log(email, password, partnerToken);
     if (!partnerToken || !email || !password) {
-      console.error("Отсутствуют учетные данные для авторизации в Altegio");
+      console.error("Missing Altegio authentication credentials");
       return null;
     }
 
@@ -117,7 +117,7 @@ async function getAltegioUserToken(): Promise<string | null> {
       password: password,
     };
 
-    console.log("Авторизация в Altegio...");
+    console.log("Authenticating with Altegio...");
     const authResponse = await fetch(authUrl, {
       method: "POST",
       headers,
@@ -127,7 +127,7 @@ async function getAltegioUserToken(): Promise<string | null> {
     const authResponseText = await authResponse.text();
 
     if (!authResponse.ok) {
-      console.error("Ошибка авторизации в Altegio:", authResponseText);
+      console.error("Altegio authentication error:", authResponseText);
       return null;
     }
 
@@ -135,18 +135,18 @@ async function getAltegioUserToken(): Promise<string | null> {
       const authData = JSON.parse(authResponseText);
       console.log(authData);
       if (authData && authData.data && authData.data.user_token) {
-        console.log("Успешная авторизация в Altegio");
+        console.log("Successfully authenticated with Altegio");
         return authData.data.user_token;
       } else {
-        console.error("В ответе авторизации отсутствует user_token");
+        console.error("Missing user_token in authentication response");
         return null;
       }
     } catch (error) {
-      console.error("Ошибка при парсинге ответа авторизации:", error);
+      console.error("Error parsing authentication response:", error);
       return null;
     }
   } catch (error) {
-    console.error("Ошибка при авторизации в Altegio:", error);
+    console.error("Error authenticating with Altegio:", error);
     return null;
   }
 }
@@ -160,7 +160,7 @@ async function sendToCRM(
   try {
     const formattedPhone = formatPhoneForAltegio(phoneNumber);
     console.log(
-      `Отправка запроса в CRM: ${formattedPhone}, скидка ${discountValue}%`
+      `Sending request to CRM: ${formattedPhone}, discount ${discountValue}%`
     );
 
     const userToken = await getAltegioUserToken();
@@ -201,7 +201,7 @@ async function sendToCRM(
     const createResponseText = await createResponse.text();
 
     if (!createResponse.ok) {
-      console.error("Ошибка при создании клиента:", createResponseText);
+      console.error("Error creating client:", createResponseText);
       try {
         const errorData = JSON.parse(createResponseText);
 
@@ -224,7 +224,7 @@ async function sendToCRM(
             getLocalizedMessage("clientResponseError", lang),
         };
       } catch (error) {
-        console.error("Ошибка при создании клиента:", error);
+        console.error("Error creating client:", error);
         return {
           success: false,
           message: getLocalizedMessage("clientResponseError", lang),
@@ -235,9 +235,9 @@ async function sendToCRM(
     try {
       const createData = JSON.parse(createResponseText);
       clientId = createData?.data?.id;
-      console.log(`Создан новый клиент, ID: ${clientId}`);
+      console.log(`New client created, ID: ${clientId}`);
     } catch (error) {
-      console.error("Ошибка при парсинге ответа создания клиента:", error);
+      console.error("Error parsing client creation response:", error);
       return {
         success: false,
         message: getLocalizedMessage("clientResponseError", lang),
@@ -268,7 +268,7 @@ async function sendToCRM(
     const smsResponseText = await smsResponse.text();
 
     if (!smsResponse.ok) {
-      console.error("Ошибка при отправке SMS:", smsResponseText);
+      console.error("Error sending SMS:", smsResponseText);
       try {
         const errorData = JSON.parse(smsResponseText);
         return {
@@ -278,7 +278,7 @@ async function sendToCRM(
           }`,
         };
       } catch (error) {
-        console.error("Ошибка при отправке SMS:", error);
+        console.error("Error sending SMS:", error);
         return {
           success: false,
           message: getLocalizedMessage("smsError", lang),
@@ -288,7 +288,7 @@ async function sendToCRM(
 
     try {
       const smsData = JSON.parse(smsResponseText);
-      console.log("Результат отправки SMS:", JSON.stringify(smsData));
+      console.log("SMS sending result:", JSON.stringify(smsData));
 
       if (smsData && !smsData.success) {
         return {
@@ -306,14 +306,14 @@ async function sendToCRM(
           : getLocalizedMessage("smsSentExistingClient", lang),
       };
     } catch (error) {
-      console.error("Ошибка при парсинге ответа отправки SMS:", error);
+      console.error("Error parsing SMS response:", error);
       return {
         success: false,
         message: getLocalizedMessage("smsProcessingError", lang),
       };
     }
   } catch (error) {
-    console.error("Ошибка в sendToCRM:", error);
+    console.error("Error in sendToCRM:", error);
     return {
       success: false,
       message: getLocalizedMessage("crmError", lang),
@@ -442,18 +442,18 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       discountValue,
     };
 
-    console.log("Відповідь API:", JSON.stringify(response, null, 2));
+    console.log("API Response:", JSON.stringify(response, null, 2));
 
     return NextResponse.json(response, { status: 200 });
   } catch (error) {
     console.error("Error processing discount request:", error);
-    // Пытаемся получить язык из запроса, если возможно
+    // Try to get language from request if possible
     let lang = "ua";
     try {
       const data = await req.json();
       lang = data.lang || "ua";
     } catch {
-      // Если не удалось получить язык из запроса, используем украинский по умолчанию
+      // If unable to get language from request, use Ukrainian as default
     }
 
     return NextResponse.json(

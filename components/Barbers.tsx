@@ -5,7 +5,7 @@ import { CalendarBlank } from "phosphor-react";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 
-// Данные о мастерах
+// Barbers data
 const barbers = [
   {
     slug: "egor",
@@ -39,7 +39,7 @@ const barbers = [
   },
 ];
 
-// Анимация для появления элементов
+// Animation for element appearance
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: {

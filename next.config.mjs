@@ -3,20 +3,20 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Отключаем серверные компоненты для ускорения сборки
+  // Disable server components to speed up build
   experimental: {
     dynamicIO: false,
     authInterrupts: true,
     useCache: true,
     serverComponentsExternalPackages: [],
   },
-  // Оптимизации для Vercel
+  // Optimizations for Vercel
   poweredByHeader: false,
   reactStrictMode: true,
   compress: true,
-  // Увеличиваем таймаут для сборки
+  // Increase build timeout
   staticPageGenerationTimeout: 60,
-  // Оптимизируем кэширование
+  // Optimize caching
   headers: async () => [
     {
       source: "/:path*",

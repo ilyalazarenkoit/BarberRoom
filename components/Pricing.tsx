@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { CalendarBlank, Scissors } from "phosphor-react";
 import { useTranslation } from "react-i18next";
 
-// Анимация для появления элементов
+// Animation for element appearance
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -13,7 +13,7 @@ const fadeInUp = {
   },
 };
 
-// Анимация для контейнера с задержкой для дочерних элементов
+// Animation for container with delay for child elements
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
@@ -71,7 +71,7 @@ export const Pricing = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Молодший барбер */}
+          {/* Junior barber */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -111,7 +111,7 @@ export const Pricing = () => {
             </ul>
           </motion.div>
 
-          {/* Барбер */}
+          {/* Barber */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -153,7 +153,7 @@ export const Pricing = () => {
             </ul>
           </motion.div>
 
-          {/* Старший барбер */}
+          {/* Senior barber */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -194,7 +194,7 @@ export const Pricing = () => {
           </motion.div>
         </div>
 
-        {/* Общая кнопка записи */}
+        {/* Common booking button */}
         <motion.div
           initial="hidden"
           whileInView="visible"

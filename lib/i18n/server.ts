@@ -3,6 +3,8 @@ import resourcesToBackend from "i18next-resources-to-backend";
 import { headers } from "next/headers";
 
 import en from "@/public/locales/en/translation.json";
+import de from "@/public/locales/de/translation.json";
+import fr from "@/public/locales/fr/translation.json";
 import ua from "@/public/locales/ua/translation.json";
 import ru from "@/public/locales/ru/translation.json";
 
@@ -12,16 +14,18 @@ const initI18next = async (lang: string) => {
     .use(
       resourcesToBackend({
         en: { common: en },
+        de: { common: de },
+        fr: { common: fr },
         ua: { common: ua },
         ru: { common: ru },
       })
     )
     .init({
       lng: lang,
-      fallbackLng: "ua",
-      supportedLngs: ["en", "ua", "ru"],
+      fallbackLng: "en",
+      supportedLngs: ["en", "de", "fr", "ua", "ru"],
       defaultNS: "common",
-      preload: ["en", "ua", "ru"],
+      preload: ["en", "de", "fr", "ua", "ru"],
       ns: ["common"],
       interpolation: {
         escapeValue: false,
@@ -33,7 +37,7 @@ const initI18next = async (lang: string) => {
 export async function createTranslation() {
   const headersList = await headers();
   const lang =
-    headersList.get("accept-language")?.split(",")[0].split("-")[0] || "de";
+    headersList.get("accept-language")?.split(",")[0].split("-")[0] || "en";
   const i18n = await initI18next(lang);
 
   return {

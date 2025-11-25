@@ -96,11 +96,11 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
       setCanSpin(false);
       setHasSpun(true);
 
-      // Если есть сохраненный токен, проверяем его на сервере
+      // If there is a saved token, validate it on the server
       if (savedToken) {
         validateRouletteToken(savedToken);
       } else {
-        // Если токена нет, но флаг hasUserSpun установлен, сбрасываем состояние
+        // If there is no token but hasUserSpun flag is set, reset state
         handleReset();
       }
 
@@ -163,10 +163,10 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
         setPrizeNumber(data.prizeNumber);
       } else {
         localStorage.removeItem("rouletteToken");
-        console.warn("Токен рулетки недействителен или истек");
+        console.warn("Roulette token is invalid or expired");
       }
     } catch (error) {
-      console.error("Ошибка при проверке токена рулетки:", error);
+      console.error("Error validating roulette token:", error);
     }
   };
 
@@ -207,7 +207,7 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
       setPrizeNumber(newPrizeNumber);
       setMustSpin(true);
     } catch (error) {
-      console.error("Ошибка при получении результата вращения:", error);
+      console.error("Error getting spin result:", error);
 
       const newPrizeNumber = Math.floor(Math.random() * discountData.length);
       setPrizeNumber(newPrizeNumber);
@@ -237,10 +237,10 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
       if (data.success) {
         localStorage.setItem("rouletteToken", data.token);
       } else {
-        console.error("Не удалось получить токен рулетки");
+        console.error("Failed to get roulette token");
       }
     } catch (error) {
-      console.error("Ошибка при получении токена рулетки:", error);
+      console.error("Error getting roulette token:", error);
     }
 
     window.dispatchEvent(new Event("localStorageChange"));
@@ -329,7 +329,7 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
             actualPrizeNumber = data.prizeNumber;
           }
         } catch (error) {
-          console.error("Ошибка при проверке токена рулетки:", error);
+          console.error("Error validating roulette token:", error);
         }
       }
 
@@ -855,7 +855,7 @@ const Roulette: React.FC<RouletteProps> = ({ className }) => {
         </p>
       )}
 
-      {/* Модальное окно с условиями скидки */}
+      {/* Modal window with discount terms */}
       <AnimatePresence>
         {showTerms && (
           <motion.div

@@ -7,7 +7,7 @@ import { Gallery } from "./Gallery";
 import { Pricing } from "./Pricing";
 import { useTranslation } from "react-i18next";
 
-// Анимация для появления элементов
+// Animation for element appearance
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -17,7 +17,7 @@ const fadeInUp = {
   },
 };
 
-// Анимация для контейнеров
+// Animation for containers
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
@@ -33,7 +33,7 @@ export const Main = () => {
 
   return (
     <main className="pt-16 md:pt-24">
-      {/* Секция 1: Интерьер барбершопа */}
+      {/* Section 1: Barbershop interior */}
       <section className="relative h-[80vh] md:h-[100vh] flex items-start md:items-center pt-[20vh] md:pt-0 ">
         <div className="absolute inset-0 z-0">
           <Image
@@ -93,14 +93,14 @@ export const Main = () => {
         </div>
       </section>
 
-      {/* Секция 1: Галерея */}
+      {/* Section 1: Gallery */}
 
       <Gallery />
 
-      {/* Секция 2: Прайсинг */}
+      {/* Section 2: Pricing */}
       <Pricing />
 
-      {/* Секция 3: Мастера */}
+      {/* Section 3: Barbers */}
 
       <Barbers />
     </main>

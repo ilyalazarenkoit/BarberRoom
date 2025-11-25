@@ -275,7 +275,7 @@ export default function BarberDetails() {
                   </p>
                 </div>
 
-                {/* Услуги */}
+                {/* Services */}
                 <div>
                   <h3 className="text-xl font-semibold text-[#0B322F] mb-2 flex items-center">
                     <Scissors

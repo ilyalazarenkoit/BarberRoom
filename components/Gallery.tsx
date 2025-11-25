@@ -17,7 +17,7 @@ interface GalleryItem {
   imageSrc: string;
 }
 
-// Объединяем все фотографии в один массив
+// Combine all photos into one array
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
@@ -210,7 +210,7 @@ export const Gallery = () => {
         </motion.div>
 
         <div>
-          {/* Объединенная галерея стрижек и бород */}
+          {/* Combined gallery of haircuts and beards */}
           <div className="space-y-4 flex items-center flex-col">
             <motion.h3
               initial="hidden"

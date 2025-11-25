@@ -4,7 +4,7 @@ import { MapPin, Phone, Clock, InstagramLogo, Copyright } from "phosphor-react";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
-// Анимация для появления элементов
+// Animation for element appearance
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: {

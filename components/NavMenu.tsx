@@ -17,31 +17,31 @@ export const NavMenu = ({ isOpen, onClose }: NavMenuProps) => {
   const menuRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
-  // Предотвращаем прокрутку при касании
+  // Prevent scrolling on touch
   const preventScroll = (e: TouchEvent) => {
     e.preventDefault();
   };
 
-  // Блокировка скролла при открытии меню
+  // Lock scroll when menu is open
   useEffect(() => {
-    // Сохраняем оригинальные стили
+    // Save original styles
     const originalStyle = window.getComputedStyle(document.body);
     const originalOverflow = originalStyle.overflow;
 
     if (isOpen) {
-      // Сохраняем текущую позицию скролла
+      // Save current scroll position
       const scrollY = window.scrollY;
 
-      // Блокируем скролл на body
+      // Lock scroll on body
       document.body.style.overflow = "hidden";
       document.body.style.position = "fixed";
       document.body.style.top = `-${scrollY}px`;
       document.body.style.width = "100%";
 
-      // Добавляем обработчик для предотвращения прокрутки на мобильных устройствах
+      // Add handler to prevent scrolling on mobile devices
       document.addEventListener("touchmove", preventScroll, { passive: false });
 
-      // Добавляем обработчик для предотвращения прокрутки колесиком мыши
+      // Add handler to prevent scrolling with mouse wheel
       const handleWheel = (e: WheelEvent) => {
         if (!menuRef.current?.contains(e.target as Node)) {
           e.preventDefault();
@@ -51,19 +51,19 @@ export const NavMenu = ({ isOpen, onClose }: NavMenuProps) => {
       window.addEventListener("wheel", handleWheel, { passive: false });
 
       return () => {
-        // Восстанавливаем оригинальные стили и позицию скролла
+        // Restore original styles and scroll position
         document.body.style.overflow = originalOverflow;
         document.body.style.position = "";
         document.body.style.top = "";
         document.body.style.width = "";
         window.scrollTo(0, scrollY);
 
-        // Удаляем обработчики событий
+        // Remove event handlers
         document.removeEventListener("touchmove", preventScroll);
         window.removeEventListener("wheel", handleWheel);
       };
     } else {
-      // Если меню закрыто, восстанавливаем скролл
+      // If menu is closed, restore scroll
       if (document.body.style.top) {
         const scrollY = Math.abs(parseInt(document.body.style.top || "0"));
         document.body.style.overflow = originalOverflow;
@@ -73,7 +73,7 @@ export const NavMenu = ({ isOpen, onClose }: NavMenuProps) => {
         window.scrollTo(0, scrollY);
       }
 
-      // Удаляем обработчики событий
+      // Remove event handlers
       document.removeEventListener("touchmove", preventScroll);
     }
   }, [isOpen]);
@@ -121,7 +121,7 @@ export const NavMenu = ({ isOpen, onClose }: NavMenuProps) => {
     { name: t("header.contacts"), href: "#contacts" },
   ];
 
-  // Проверяем, находимся ли мы на главной странице
+  // Check if we are on the home page
   const isHomePage = pathname === "/";
 
   return (
@@ -146,7 +146,7 @@ export const NavMenu = ({ isOpen, onClose }: NavMenuProps) => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            onClick={(e) => e.stopPropagation()} // Предотвращаем всплытие события
+            onClick={(e) => e.stopPropagation()} // Prevent event bubbling
           >
             {/* Header with close button */}
             <div className="flex justify-end items-center p-4 border-b border-gray-100">
@@ -172,7 +172,7 @@ export const NavMenu = ({ isOpen, onClose }: NavMenuProps) => {
                   animate="visible"
                 >
                   {isHomePage ? (
-                    // Если мы на главной странице, используем якорные ссылки как есть
+                    // If we are on the home page, use anchor links as is
                     <Link
                       href={item.href}
                       onClick={onClose}
@@ -181,7 +181,7 @@ export const NavMenu = ({ isOpen, onClose }: NavMenuProps) => {
                       {item.name}
                     </Link>
                   ) : (
-                    // Если мы на любой другой странице, перенаправляем на главную с якорем
+                    // If we are on any other page, redirect to home with anchor
                     <Link
                       href={`/${item.href}`}
                       onClick={onClose}

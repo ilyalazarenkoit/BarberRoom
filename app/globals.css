@@ -12,22 +12,22 @@
 
 body {
   min-height: 100vh;
-  /* Исправление для iOS Safari */
+  /* Fix for iOS Safari */
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   overscroll-behavior-y: none;
   position: relative;
 }
 
-/* Стили для якорных ссылок с учетом фиксированного хедера */
+/* Styles for anchor links considering fixed header */
 html {
-  scroll-behavior: smooth; /* Плавная прокрутка */
-  scroll-padding-top: 5rem; /* Отступ сверху для учета высоты хедера */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-padding-top: 5rem; /* Top offset to account for header height */
   height: 100%;
   overflow-y: auto;
 }
 
-/* Для мобильных устройств уменьшаем отступ */
+/* Reduce offset for mobile devices */
 @media (max-width: 768px) {
   html {
     scroll-padding-top: 4rem;

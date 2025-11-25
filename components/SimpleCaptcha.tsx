@@ -20,7 +20,7 @@ const SimpleCaptcha: React.FC<SimpleCaptchaProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [attempts, setAttempts] = useState(0);
 
-  // Генерация новых чисел для капчи
+  // Generate new numbers for captcha
   const generateNewNumbers = () => {
     setFirstNumber(Math.floor(Math.random() * 10) + 1);
     setSecondNumber(Math.floor(Math.random() * 10) + 1);
@@ -28,12 +28,12 @@ const SimpleCaptcha: React.FC<SimpleCaptchaProps> = ({
     setError(null);
   };
 
-  // Инициализация капчи при первой загрузке
+  // Initialize captcha on first load
   useEffect(() => {
     generateNewNumbers();
   }, []);
 
-  // Обработка отправки формы
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -46,14 +46,14 @@ const SimpleCaptcha: React.FC<SimpleCaptchaProps> = ({
     }
 
     if (userAnswerNum === correctAnswer) {
-      // Успешное прохождение капчи
+      // Successful captcha completion
       onSuccess();
     } else {
-      // Неправильный ответ
+      // Incorrect answer
       setError("Неправильна відповідь, спробуйте ще раз");
       setAttempts((prev) => prev + 1);
 
-      // Генерируем новые числа после 3 неудачных попыток
+      // Generate new numbers after 3 failed attempts
       if (attempts >= 2) {
         generateNewNumbers();
         setAttempts(0);
@@ -90,7 +90,7 @@ const SimpleCaptcha: React.FC<SimpleCaptchaProps> = ({
             type="text"
             value={userAnswer}
             onChange={(e) => {
-              // Разрешаем только цифры
+              // Allow only digits
               const value = e.target.value.replace(/[^\d]/g, "");
               setUserAnswer(value);
               setError(null);
